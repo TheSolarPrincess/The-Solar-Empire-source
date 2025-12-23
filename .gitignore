@@ -4,4 +4,4 @@ out/*
 .dir-locals.el
 .hypb
 workbench.org
-attachment
+/attachment/
