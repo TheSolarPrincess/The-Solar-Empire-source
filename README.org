@@ -1,0 +1,14 @@
+This is the source code of my website, [[https://thesolarprincess.site/][The Solar Empire]]. It‘s for my personal use, but if you want to fork it and make your own website, go ahead.
+
+** Raison d'être
+
+- Some pages on this site have an English and a Russian language version – I needed to generate language-switch links in the header
+- This generates RSS on my own terms (the files I want to generate RSS for, and the time of publishing, are under my control). Two versions of the RSS – Russian and English feeds.
+
+
+** How to
+
+Change the project-base variable in code.el to where you put the files. Or replace it with just getting the current directory; I don‘t do this for clandestine reasons.
+Run code.el to export everything into the out/ folder, which can be served from a static website host.
+
+RSS generation works with Babashka, you‘d have to install it if you want RSS.

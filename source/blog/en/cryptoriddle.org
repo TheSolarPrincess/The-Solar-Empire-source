@@ -1,0 +1,15 @@
+#+TITLE: Asymmetric riddleography
+
+As a recovering expert in communication protocols, I occasionally try to write what I know.
+
+I was thinking about one-way functions and storing passwords in hashes, and I got that idea — that you also can use it for primitive “ciphers” like “the tiger is out of the cage”. You can adopt this plot twist into a story or a game if you want.
+
+An important NPC asks the players a riddle. The riddle is difficult, contrived, confusing, and overall not very well-designed. The assumption is that the players can't possibly solve it, but if you tell them the answer, they would understand that it's the correct one. The riddle would probably contain a lot of extremely specific conditions that don't send you down any specific trains of thought.
+
+Later, having forgotten about the riddle and not thinking it to be very important, the players meet that NPC again, and they suspect it can be an impostor pretending to be them. The problem is that the impostor can read their thoughts!
+
+Whatever question you think of of the form “what only the real NPC would know”, he would know what answer can satisfy you. If you try to provoke him to do something, he would know what behavior you expect. Whatever method you can think of to tell the real deal from an impostor, he will know exactly what to do to make you decide that he is real. He knows everything you know, can anticipate and avoid any of your traps, he is immune to deception and misdirection. It seems like this is unsolvable — the impostor can fully imitate the original (as far as you know them); whatever idea you have in mind, he can behave exactly like you expect the original to behave.
+
+But there is a creative solution for a resourceful protagonist! Just ask him for the answer to the riddle. The original can simply tell it to you, you can verify that the answer is correct, and you would know it's the original. But the impostor doesn't know the answer! He can probe your thoughts for the riddle, but he can't learn the answer, because you don't know it either. He knows what you expect to hear, but he can never know the exact words — it's a one-way function, you can check if the answer is correct, but you can't find the answer. The impostor won't be able to answer the riddle.
+
+It would be cool to add ZKP to the mix, so that you can repeat the trick any number of times — otherwise it only works once; if you learn the answer, every further impostor would know it as well. But you can make your players to carry code books with riddles for each other, that would be amazing.

@@ -1,0 +1,159 @@
+#+TITLE: Papers please and the Tomb of the Unknown Soldier
+
+
+I have been provoked into spontaneously analyzing /Papers, Please/. I think the idea is sufficiently self-contained and novel to be a post.
+
+--------------
+
+Alu: Crime is often romanticized in media. Theft, murder, banditry, piracy, even domestic abuse. Nobody wants to watch underclass social trash, but in culture there is a stable archetype of a successful, independent, conventionally attractive latex-clad hot criminals. Movies, games, amazing stories of their' exploits, even porn.
+Alu: And somehow we missed the opportunity to romanticize other crimes — corruption, NDA violation, child slavery, contempt of the court, slander, criminal negligence, suicide propaganda[^1].
+Alu: I can see that those are less universal as far as crimes go, but still, it's an unoccupied niche waiting for someone to create a new art movement out of it
+The Solar Princess: The correct answers are
+1) thieves, bandits, and pirates are underdogs vs power, an underdog reader can sympathize; but corruption and slavery are power vs underdogs, nobody cares for that as a protagonist, that only works as an antagonist.
+2) theft, assassination, piracy — all take skill, it's charismatic and interesting. Criminal negligence requires you to be an idiot.
+3) Watch *Thank you for Smoking* for a unique take on your concept of villainy
+4) If a modern criminal movement ever becomes romanticized in media in the future, it's probably ISIS terrorists :D
+Alu: It's a good movie, but a rare example. As is corruption, really. There's Gogol's *Dead Souls*, but it's just about the only one. Even though it does require skill, and it has way more potential than banditry where beating people up is the entire skill.
+Alu: Charisma and competence are the mainstays of a thief's media image, not so much in reality
+The Solar Princess: It's possible, but way harder and requires a lot of mastery from the artist. I would have never managed to do it like *Thank you for Smoking*. So it's rarer.
+The Solar Princess: Perhaps someone will invent the “secret sauce”
+Alu: The more valuable the art
+The Solar Princess: Do it, then.
+The Solar Princess: Look at Robin Hood. He's not just a bandit, he's a *noble* bandit, archer extraordinaire, and the sexiest fox
+The Solar Princess: Can you invent a sexy and alluring child slaver that the reader can sympathize with?
+The Solar Princess: BTW, Nabokov is great here. Humbert Humbert is a vile villain, but Nabokov managed to make him sympathetic, because he frames his suffering as being an innocent victim of circumstance and a bossy little girl. And you only realize how absurd his takes are on reflection.
+Alu: Terrorism is already romanticized, not any less than piracy or banditry, nothing new here
+The Solar Princess: *V for Vendetta* style terrorism — maybe — but what about real life examples like ISIS? I don't think so. Pirates used to be seen as real villains back in their day. Black Beard managed to become alluring. Could Bin Laden do the same?
+The Solar Princess: Nowadays — well, it would be a dick move because the atrocities are fresh in the memory, and a lot of people lost their family in the attacks. It could only work for shock value.
+The Solar Princess: The Vietnam War is a trope. Will the war in Ukraine be likewise?
+Alu: Somebody will make it, if not already. The pirates in media have jack shit to do with real pirates
+The Solar Princess: Find some, then. Inauthentic but nevertheless real terrorists and real events in fiction.
+Alu: Romanticized ISIS will look nothing like real ISIS
+The Solar Princess: *Innocence of Muslims* doesn't count
+The Solar Princess: And yet, not many would dare make something like that, and even if they do, it will hurt the victims of ISIS
+The Solar Princess: In the future — maybe
+The Solar Princess: Will we have a romanticized story of the Crocus City Hall attack?
+The Solar Princess: [Ryazan Sugar]([1999 Russian apartment bombings - Wikipedia](https://en.wikipedia.org/wiki/1999_Russian_apartment_bombings) ) as celebrated as the Gunpowder Plot?
+The Solar Princess: I think not, because by the time it becomes historically relevant, the AI will screw up all the artforms and obviate this discussion
+The Solar Princess: Well, drug dealers. Fucking *Breaking Bad*
+Alu: Joker can be seen as romanticizing of terrorism, or maybe of mental illness
+The Solar Princess: I would like to see romanticized computer piracy. With hacker aesthetics and Empress vs GForce.
+The Solar Princess: Joker is same as Vendetta, romanticizing terrorism as an idea but not specific terrorists. Vigilantism is, after all, underdog vs power.
+The Solar Princess: BTW, the recent *Joker* with Joaquin Phoenix is a deconstruction, it **de**romanticizes mental illness, showing that it's nothing fun, just pure evil
+Alu: It's not hard, given that computer pirates aren't scum that need their image distorted to be alluring. They're fine as they are
+Alu: A lot of unrealistic hackers though. *The Matrix*
+The Solar Princess: Yeah, the fight happens in the decompiler window and not in the real world, so not very cinematic. Although wrt this I like *Hikaru no Go*, everything is happening on a piece of wood with rocks, and it's awesome
+The Solar Princess: I mean, I'm a security expert, I could cook up a *Hikaru no Go*-like scenario about computer pirates.
+The Solar Princess: Ah! *Imitation Game*!
+The Solar Princess: I didn't watch it, but it's about the dawn of hackers and Turing the Chad
+The Solar Princess: Who defeated fascism with the power of math
+The Solar Princess: Oh, I remember romanticized criminal negligience!
+The Solar Princess: *Papers, Please*!
+The Solar Princess: It works because negligence is an actual choice that you need to make to save time for other things
+The Solar Princess: And you feel it in the mechanics and the balance
+The Solar Princess: A posteriori simple, but highly effective take
+Alu: Yes, a genius game
+The Solar Princess: “How to make the most boring job in the world super interesting”
+Alu: It's more corruption than negligence
+Alu: Still awesome though
+The Solar Princess: Negligence as well. You have to process as much as possible and reach your targets, so you pay less attention to the core of your job, you get punished for it, and it death spirals
+Alu: It's not romanticization, it's pure need. You look like a victim of circumstances, not like a person who has it under control and does crimes in service of a higher goal or just for funsies and bragging rights
+The Solar Princess: You do crimes because you want to do something more than stamping paper, you have other goals there. And you risk the system's wrath, and you play tricks on it to do “the right thing”. And in the ability to slide along that precipice, not wasting your time manning the death machine, but also not getting murdered by it — is a kind of competence that makes the mechanical challenge of the game
+The Solar Princess: Quite a genius take really
+The Solar Princess: And underdog, not even cool like Robin Hood, but still doing his small part in bringing down the system
+The Solar Princess: You are a victim of circumstances, yes. But to do your small good deed of the day from the position of a helpless victim — *is* competence, *is* romance, *is* charisma
+The Solar Princess: And the fact that nobody can pat you on the back for it is also important
+The Solar Princess: We all think that out heroism will be repaid with everybody praising you for it
+The Solar Princess: But doing good, knowing that the world will forget you in five minutes, that nobody would even know you did something — is a kind of moral strength
+The Solar Princess: It carries the world
+Alu: Nobody thinks that. It's just *the viewer* must adore the hero. Romanticizing crime like in Robin Hood is a power fantasy
+The Solar Princess: Well, *Papers, Please* shows up how to have our cake and eat it too. Negligence isn't a power fantasy, it's the opposite of power. But! It's a *moral fantasy*, if you could say that. You don't need to be Superman to do good. You can strive to overcome your own weakness and patheticness just as you can overcome the system. The game shows that even if the player thinks of himself as of pathetic scum and not Robin Hood, it doesn't mean that his life is pointless just because it's not dramatic. You do your part. After ten thousands of yous the system will collapse. Nobody will remember you, but do you need to be remembered, or do you need to bring down the system?
+The Solar Princess: I always liked the moral image of Superman, but, like. I'm not Superman. But it doesn't mean I should give up and sink. I can still do my small part.
+The Solar Princess: I'm a weak person. Not particularly brave, not particularly smart. But if everybody who is not super gave up, the world would be a worse place.
+The Solar Princess: It is a fantasy. Just outside of the overton window
+The Solar Princess: Maybe I'm reading too much into it, but *Papers, Please* is like the Tomb of the Unknown Soldier.
+The Solar Princess: The point of TUS is — the war wasn't won by the heroes, but by the regular soldiers whom nobody remembers by name. You can only salute them collectively.
+The Solar Princess: *Papers, Please* is the civilian version
+The Solar Princess: Tomb of the Unknown Soldier — does that count as romanticizing war?
+
+I have been provoked into spontaneously analyzing /Papers, Please/. I think the idea is sufficiently self-contained and novel to be a post.
+
+
+
+
+———————
+
+
+
+
+
+Alu: Crime is often romanticized in media. Theft, murder, banditry, piracy, even domestic abuse. Nobody wants to watch underclass social trash, but in culture there is a stable archetype of a successful, independent, conventionally attractive latex-clad hot criminals. Movies, games, amazing stories of their' exploits, even porn.
+Alu: And somehow we missed the opportunity to romanticize other crimes — corruption, NDA violation, child slavery, contempt of the court, slander, criminal negligence, suicide propaganda[^1].
+Alu: I can see that those are less universal as far as crimes go, but still, it's an unoccupied niche waiting for someone to create a new art movement out of it
+The Solar Princess: The correct answers are
+1) thieves, bandits, and pirates are underdogs vs power, an underdog reader can sympathize; but corruption and slavery are power vs underdogs, nobody cares for that as a protagonist, that only works as an antagonist.
+2) theft, assassination, piracy — all take skill, it's charismatic and interesting. Criminal negligence requires you to be an idiot.
+3) Watch *Thank you for Smoking* for a unique take on your concept of villainy
+4) If a modern criminal movement ever becomes romanticized in media in the future, it's probably ISIS terrorists :D
+Alu: It's a good movie, but a rare example. As is corruption, really. There's Gogol's *Dead Souls*, but it's just about the only one. Even though it does require skill, and it has way more potential than banditry where beating people up is the entire skill.
+Alu: Charisma and competence are the mainstays of a thief's media image, not so much in reality
+The Solar Princess: It's possible, but way harder and requires a lot of mastery from the artist. I would have never managed to do it like *Thank you for Smoking*. So it's rarer.
+The Solar Princess: Perhaps someone will invent the “secret sauce”
+Alu: The more valuable the art
+The Solar Princess: Do it, then.
+The Solar Princess: Look at Robin Hood. He's not just a bandit, he's a *noble* bandit, archer extraordinaire, and the sexiest fox
+The Solar Princess: Can you invent a sexy and alluring child slaver that the reader can sympathize with?
+The Solar Princess: BTW, Nabokov is great here. Humbert Humbert is a vile villain, but Nabokov managed to make him sympathetic, because he frames his suffering as being an innocent victim of circumstance and a bossy little girl. And you only realize how absurd his takes are on reflection.
+Alu: Terrorism is already romanticized, not any less than piracy or banditry, nothing new here
+The Solar Princess: *V for Vendetta* style terrorism — maybe — but what about real life examples like ISIS? I don't think so. Pirates used to be seen as real villains back in their day. Black Beard managed to become alluring. Could Bin Laden do the same?
+The Solar Princess: Nowadays — well, it would be a dick move because the atrocities are fresh in the memory, and a lot of people lost their family in the attacks. It could only work for shock value.
+The Solar Princess: The Vietnam War is a trope. Will the war in Ukraine be likewise?
+Alu: Somebody will make it, if not already. The pirates in media have jack shit to do with real pirates
+The Solar Princess: Find some, then. Inauthentic but nevertheless real terrorists and real events in fiction.
+Alu: Romanticized ISIS will look nothing like real ISIS
+The Solar Princess: *Innocence of Muslims* doesn't count
+The Solar Princess: And yet, not many would dare make something like that, and even if they do, it will hurt the victims of ISIS
+The Solar Princess: In the future — maybe
+The Solar Princess: Will we have a romanticized story of the Crocus City Hall attack?
+The Solar Princess: [Ryazan Sugar]([1999 Russian apartment bombings - Wikipedia](https://en.wikipedia.org/wiki/1999_Russian_apartment_bombings) ) as celebrated as the Gunpowder Plot?
+The Solar Princess: I think not, because by the time it becomes historically relevant, the AI will screw up all the artforms and obviate this discussion
+The Solar Princess: Well, drug dealers. Fucking *Breaking Bad*
+Alu: Joker can be seen as romanticizing of terrorism, or maybe of mental illness
+The Solar Princess: I would like to see romanticized computer piracy. With hacker aesthetics and Empress vs GForce.
+The Solar Princess: Joker is same as Vendetta, romanticizing terrorism as an idea but not specific terrorists. Vigilantism is, after all, underdog vs power.
+The Solar Princess: BTW, the recent *Joker* with Joaquin Phoenix is a deconstruction, it **de**romanticizes mental illness, showing that it's nothing fun, just pure evil
+Alu: It's not hard, given that computer pirates aren't scum that need their image distorted to be alluring. They're fine as they are
+Alu: A lot of unrealistic hackers though. *The Matrix*
+The Solar Princess: Yeah, the fight happens in the decompiler window and not in the real world, so not very cinematic. Although wrt this I like *Hikaru no Go*, everything is happening on a piece of wood with rocks, and it's awesome
+The Solar Princess: I mean, I'm a security expert, I could cook up a *Hikaru no Go*-like scenario about computer pirates.
+The Solar Princess: Ah! *Imitation Game*!
+The Solar Princess: I didn't watch it, but it's about the dawn of hackers and Turing the Chad
+The Solar Princess: Who defeated fascism with the power of math
+The Solar Princess: Oh, I remember romanticized criminal negligience!
+The Solar Princess: *Papers, Please*!
+The Solar Princess: It works because negligence is an actual choice that you need to make to save time for other things
+The Solar Princess: And you feel it in the mechanics and the balance
+The Solar Princess: A posteriori simple, but highly effective take
+Alu: Yes, a genius game
+The Solar Princess: “How to make the most boring job in the world super interesting”
+Alu: It's more corruption than negligence
+Alu: Still awesome though
+The Solar Princess: Negligence as well. You have to process as much as possible and reach your targets, so you pay less attention to the core of your job, you get punished for it, and it death spirals
+Alu: It's not romanticization, it's pure need. You look like a victim of circumstances, not like a person who has it under control and does crimes in service of a higher goal or just for funsies and bragging rights
+The Solar Princess: You do crimes because you want to do something more than stamping paper, you have other goals there. And you risk the system's wrath, and you play tricks on it to do “the right thing”. And in the ability to slide along that precipice, not wasting your time manning the death machine, but also not getting murdered by it — is a kind of competence that makes the mechanical challenge of the game
+The Solar Princess: Quite a genius take really
+The Solar Princess: And underdog, not even cool like Robin Hood, but still doing his small part in bringing down the system
+The Solar Princess: You are a victim of circumstances, yes. But to do your small good deed of the day from the position of a helpless victim — *is* competence, *is* romance, *is* charisma
+The Solar Princess: And the fact that nobody can pat you on the back for it is also important
+The Solar Princess: We all think that out heroism will be repaid with everybody praising you for it
+The Solar Princess: But doing good, knowing that the world will forget you in five minutes, that nobody would even know you did something — is a kind of moral strength
+The Solar Princess: It carries the world
+Alu: Nobody thinks that. It's just *the viewer* must adore the hero. Romanticizing crime like in Robin Hood is a power fantasy
+The Solar Princess: Well, *Papers, Please* shows up how to have our cake and eat it too. Negligence isn't a power fantasy, it's the opposite of power. But! It's a *moral fantasy*, if you could say that. You don't need to be Superman to do good. You can strive to overcome your own weakness and patheticness just as you can overcome the system. The game shows that even if the player thinks of himself as of pathetic scum and not Robin Hood, it doesn't mean that his life is pointless just because it's not dramatic. You do your part. After ten thousands of yous the system will collapse. Nobody will remember you, but do you need to be remembered, or do you need to bring down the system?
+The Solar Princess: I always liked the moral image of Superman, but, like. I'm not Superman. But it doesn't mean I should give up and sink. I can still do my small part.
+The Solar Princess: I'm a weak person. Not particularly brave, not particularly smart. But if everybody who is not super gave up, the world would be a worse place.
+The Solar Princess: It is a fantasy. Just outside of the overton window
+The Solar Princess: Maybe I'm reading too much into it, but *Papers, Please* is like the Tomb of the Unknown Soldier.
+The Solar Princess: The point of TUS is — the war wasn't won by the heroes, but by the regular soldiers whom nobody remembers by name. You can only salute them collectively.
+The Solar Princess: *Papers, Please* is the civilian version
+The Solar Princess: Tomb of the Unknown Soldier — does that count as romanticizing war?

@@ -1,0 +1,156 @@
+:PROPERTIES:
+:ID:       annoyingrpg
+:DIR:      ../../attachment/images/rpg/
+:END:
+#+TITLE: Towards less annoying RPGs
+#+LANGUAGE: en
+
+My relationship with the RPG genre is an unending love/hate. I love its core elements. I enjoy roleplaying, exploring, doing side quests, leveling up, immersing myself, freedom of choice, replayability, rich stories and settings, flexible mechanics, dungeon crawling... basically, everything normal people love about the genre.
+
+But sometimes developers make very specific design choices that drastically worsen the experience. What I'm going to say now is less of a unambiguous flaw and more a subjective preference — I'm not claiming this approach will work for everyone. I'm just describing what I would find enjoyable and comfortable.
+
+(And just to be clear — I'm talking about the CRPG genre specifically. I know that things should work differently in something like X-COM, no need to bring it up)
+
+Inventory. God, inventory. One cannot overstate how much I hate dealing with inventory. Sorting. Selling. Crafting. Choosing equipment. And it's not the concept of inventory that bothers me — it's not the fact that I have to manage gear — it's the technical and UI aspects of just about every single concrete implementation. In retro games it was shit, but it was understandable shit. Modern games have no excuse.
+
+Most of these problems come from /simulationism/ — trying to make things work like they do in real life, rather than in a way that's fun, convenient, and balanced.
+
+Here's how I would implement inventory in my dream CRPG game. First I'll go over some general ideas, then move on to more radical modest proposals. I'm going to use /Skyrim/ as the canonical example of having done the most wrong things, but, of course, it's not the only game committing the corresponding sins.
+
+**** Logically Separate Semantically Different Aspects of Gameplay
+
+Why does /Skyrim/ store quest items in the inventory? You can't sell them, you can't drop them, and you can't eat them. The fact that they're sitting there alongside metal ingots and soul gems is just annoying; there's no real need for it. Semantically, quest items aren't items — they're markers of quest progression. So they belong in the /journal/, not in the inventory.
+
+And such it is with everything. We mix together semantically different aspects of the game simply because, on the /simulationist/ level, they're all basically “items.” We don't dump, say, potions, spells, and perks together, we put them into different panels and subject to different presentation, because they do different things. Likewise, we shouldn't lump potions, weapons, and vendor trash together. Those do even more different things!
+
+Retro games like /Arcanum/ were especially bad with this — everything literally goes into one grid. Enjoy your inventory Tetris. /Dark Messiah of Might and Magic/ puts /spells/ into the inventory, and while there's a UI justification for that, it still leads to some unintuitive moments. Many modern games, at least, allow you to filter by type, but that's not enough — items still follow a unified UI logic regardless of their function.
+
+No. Weapons and armor should go under the Equipment tab. Consumables — into the Potion Belt. Ingredients — into the Crafting Pouch. Those should be entirely separate gameplay systems, rather than a single mixed system.
+
+A game that does it right is /Hogwarts Legacy/. Gear goes in one place, potions in another, ingredients in a third. The process of swapping a hat and the process of drinking a potion use completely different mechanics — and so they should. The fact that other games handle both using the same logic is just a holdover from older design conventions.
+
+/Hogwarts Legacy/ also shows why this isn't just a minor convenience issue. Look at how it handles crafting ingredients. Throughout the whole game, I had to open my inventory to check my ingredients only once — and that was just to see if it was even possible for the purpose of writing this post. Otherwise, I never needed to. When I'm gathering or buying ingredients, the game shows a pop-up with how many I have. When I go to a crafting station, it tells me what I can make and what I already have. When I need the info, it's there automatically. When I don't, it's out of my way.
+
+That drastically reduces cognitive load. I always have a general idea of what I have and what I can craft, and I never need to consciously dig through menus. Compared to something like /Divinity: Original Sin/, where being a crafter means spending half the game obsessively scanning menus and peering at icons in a grid — it's incredibly relaxing. I tend to skip crafting in RPGs because of that cognitive friction, but in /Hogwarts/, crafting was genuinely fun.
+
+**** Segregated Burden Mechanics
+
+Here, I'll use the word “burden” in a broad sense: burden is anything that limits how many items you can stuff into your inventory. It could be based on a literal weight in kilograms, or on a limited number of slots in a grid, or on anything else.
+
+Once again, we should separate systems by their mechanical logic. The burden that prevents you from wearing too much heavy armor, the burden that stops you from hoarding potions, and the burden that limits how much loot you can haul out of a dungeon — are all fundamentally different systems. They affect different things and serve different purposes. They shouldn't be lumped together.
+
+In some games, burden is simply superfluous, and removing it wouldn't have made the game worse (e.g. /Witcher 1/, /Planescape: Torment/). In games where you need it, it shouldn't be done via thoughtless simulationism. Developers need to understand exactly what they're trying to limit and what behavior they want to incentivize.
+
+An example of this done right is /BioShock/. You have limits on how many medkits you can carry, how much ammo, how much money, how many tonics. But those are different limits! Your ability to carry a limited supply of shotgun shells has nothing to do with how much money you can hoard. And items that aren't consumables at all — like weapons and tonics — don't take up any burden space whatsoever.
+
+**** Clearly Indicate an Item's Usefulness
+
+Thankfully, modern developers are catching up to this. But not everyone. They all need to hurry up.
+
+In /Arcanum/, figuring out whether an item is useful for crafting, needed for a quest, or can be sold safely is hardly easy. When I played as a technologist, I obsessively hoarded anything that even looked like a crafting component, not having a way to find out if I'd need it later. Eventually, I gave up and looked up all the recipes. It turned out that 80% of it could've been thrown away. My second character was a mage, and I had a much easier time. But then, much later, I found out that some seemingly useless, irreplaceable items were required for the shrines of the gods quest... and so I had to run around from vendor to vendor trying to find the one I sold those items to.
+
+What we need is simple: every item should clearly indicate what it's used for. What's for crafting, what's for quests, and what's safe to sell should be evident.
+
+**** Shared Party Inventory
+
+Praise be to Allah, the smartest designers are beginning to figure this out, too.
+
+/Skyrim/ had one completely unnecessary system. Companions could carry items, effectively increasing your total capacity. But to make use of this free capacity, you needed to access their inventory directly, playing inventory Tetris, moving items between your backpack and theirs. This was made worse by the horrible UI. /The Outer Worlds/ handled it better — companions directly increase your carrying capacity, with all items going into one shared pool. No micromanagement required.
+
+And that's how it should be everywhere. The only items that deserve to be “nailed” to a specific character are the ones they actually have equipped. Everything else goes into a shared stash. There is absolutely no reason to make the player decide which party member carries the crafting ingredients and the vendor trash. Those resources exist at the party level, and making players juggle them between individual inventories serves no mechanical purpose. It gets especially bad when your party composition changes, and you're forced to transfer items manually from one character to another. Virgil, you little shit, where did you run off to with all my stuff?! I'll kill you ୧༼ ಠ益ಠ ༽୨
+
+**** Reworking Vendor Trash
+
+Some items serve no purpose other than being sold to a vendor when you get to the town. This is realistic, but at times it's mechanically ridiculous. Take a look at /Vampire: The Masquerade — Bloodlines/. There's no burden system in that game at all; your inventory has no limits whatsoever. But vendor trash still exists. The only mechanical difference between a vendor trash item and an equivalent sum in cash is a few extra clicks at the vendor. The only “decision” it introduces is whether you want to sell now or after you level up your Finance skill. But come on, what kind of dumbass lick even levels Finance?
+
+What should happen instead: vendor trash automatically converts to money when picked up. That's it. Loot exists, hassle doesn't.
+
+Some games have a vendor trash mechanic that actually adds interesting choices. In /Skyrim/, your tastiest loot is the stuff that weighs little and sells high. That's a solid dynamic, especially since much of the loot in Skyrim isn't /purely/ vendor trash: armor and weapons looted from enemies also have value. But not every game needs this. In, say, /The Witcher/ (any of the three), that mechanic is completely superfluous. Designers should consider how this system fits into the rest of the gameplay — if there's no clear, compelling reason to include it, then don't. Don't add it just for the sake of simulationism. Gameplay systems should exist for a reason, and “genre convention” is a weak reason.
+
+A game that gets this right: /Dishonored/. Not an RPG, but same principle applies — valuable items exist in the world, but when you pick them up, they just turn into money. Done.
+
+**** Burden Only Makes Sense During Missions
+
+I was elated when I played /Pathfinder: Wrath of the Righteous/ and saw that burden is completely ignored while you're at the base.
+
+
+#+ATTR_HTML: :width 100px :align center
+[[file:../../attachment/images/rpg/xkcdyears.png]]
+
+I hope I don't need to elaborate — given everything else, this one's obvious. Having a burden system while dungeon delving? That makes sense and serves a need. Having it while you're in town? Pure simulationism for its own sake, with no gameplay value.
+
+**** Cosmetics and mechanics are separate
+
+Time after time, I end up looking like a clown who lost a bet. This happens in RPG games, too — why? Usually because the gear with the best stats doesn't match my aesthetic preferences. Around the time /Mass Effect/ came out, devs finally began adding the option to hide your helmet without losing its stat bonuses, which is a good first step. But we should go further. Stats and looks should be logically separated. I want to look like a sleek rogue-assassin in leather armor. I don't care that glass armor also counts as light and has better stats — trying to stealth around dressed like a disco ball feels ridiculous.
+
+
+#+ATTR_HTML: :width 400px :align center
+[[file:../../attachment/images/rpg/peterclown.png]]
+
+A game that gets this right: /Hogwarts Legacy/. You can reassign the visuals from piece of gear to another, and some pieces of gear are visual-only. You build up a collection of visuals in a separate tab (not in the inventory!), and you can apply them to any item. I don't have to ruin my character's gender-envy-inducing face with a pair of glasses with eyes popping out on a spring.
+
+Cosmetics doesn't just mean character appearance. In /Skyrim/, any vendor trash can potentially be used to decorate your house, which could be an argument against homogenizing them into cash. But then make decoration into its own separate mechanic! Have the player collect decoration into a catalog and place them around. This is how it works in /Hogwarts Legacy/, too — the Room of Requirement decorations can be transfigured out of thin air if you've unlocked them.
+
+Even outside of video games, this idea is catching on. In /D&D One/, your familiar's stat block is customizable independently of its physical form. So whether you prefer owls or ravens is a flavor choice — it doesn't restrict your gameplay.
+
+**** Enemy Gear Shouldn't Be Lootable At All
+
+
+#+ATTR_HTML: :width 400px :align center
+[[file:../../attachment/images/rpg/blades.png]]
+
+In /Skyrim/, 99% of the weapons and armor you loot from regular enemies are vendor trash, except maybe in the very early game. In practice, your actual gear comes from treasure chests, shops, crafting, or boss loot. The fact that a bandit's leather armor is anything but a pure vendor trash item is a weird holdover. It makes it harder to sort usable and sellable equipment, clutters up your inventory, and just generally adds noise.
+
+If you want enemies to give you money on death, fine — just have them drop actual money. Leave gear for the actually meaningful rewards — chests, shops, crafting, and bosses.
+
+There are exceptions. For example, in /The Legend of Zelda: Breath of the Wild/, new weapons don't just replace old weapons, they supplement them. Because weapons break so easily, even a weaker sword from a random enemy can be useful, just as a “trash stick” for mopping up weak mobs without wasting durability on your main. In that kind of system, gear is part equipment, part consumable, so different rules apply.
+
+**** Consumables Should Be Free Actions
+
+(For simplicity's sake, I'm going to call these “potions,” even if they're technically stimpacks or whatever.)
+
+Compare real-time games like /Fallout: New Vegas/, where you can chug potions during the pause screen with zero hassle, to turn-based games like /OMORI/, where using a potion wastes your entire turn. The latter is common in JRPGs, but there's a problem: the real opportunity cost of a potion isn't its price or rarity, it's the turn you just spent. All too often, you should have done something else with your time that doesn't need a potion. So in practice, most potions have an extremely narrow window of usefulness. Anything from the previous tier isn't just less useful — it's fully worthless.
+
+Make drinking potions a free action. Let me drink a whole handful of outdated potions to substitute for one on-tier potion. Let me squeeze a tuft of hair from a mangy mare. Potions should be an investment, you spending a resource to make a fight easier. They should actually make the fight easier.
+
+A game that gets it right: /West of Loathing./ Even though the game is turn-based, consumables don't eat your turn, which makes an otherwise dead-simple battle system surprisingly strategic.
+
+**** Make inventory part of the prep phase
+
+Time to tie everything together into one spicy hot take. This isn't just a UI tweak, it's a full-on rework of the RPG inventory formula. But I think it's worth trying at least once, just to see if it works.
+
+I propose offloading the whole inventory loadout process into its own dedicated preparation phase, separate from moment-to-moment play.
+
+You have a base — maybe a literal in-universe hub like in /Pathfinder: Wrath of the Righteous/, or a purchasable house in /Skyrim/, or a symbolic location, like /Baldur's Gate III/ camp. From there, you plan your next expedition. You choose your gear — armor, weapons, etc, which are semantically part of your build, like perks or spells, and not inventory items. Weapons get assigned to fixed slots: say, a sword, a bow, and maybe a third slot for something situational.
+
+Potions should go into a limited but expandable potion belt (maybe its size grows with your Alchemy skill-equivalent). You pack what fits and what makes sense. Going up against fire elementals? Load up on fire resistance. Delving into a dungeon, scouting the wilderness, and infiltrating a mansion would need different loadouts. Once you're geared up, that loadout is locked in. Your build is settled for the mission, and all the junk you pick up during it doesn't interfere and doesn't clutter. You don't need to pause and compare equipment at every sword you find. Anything you loot goes into a separate “loot bag,” which doesn't interact with your live build at all. And things like crafting ingredients? You're only going to use those back at base anyway. Don't make me think about them mid-dungeon. Hide them in a deep menu. Let me enter a flow state, where gear and numbers fade to the background, and it's just me and the encounter.
+
+**** Why This Works
+
+****** More Build Variety During the Game
+
+The prep phase isn't just about picking gear — it's a hub for reshuffling your entire build. Respec your stats, swap spells, hand-pick party members. Suddenly it makes sense to have situational gear, like a holy sword that rends undead but can't scratch a bear.
+
+****** Strategic Depth.
+
+Prepping for each run becomes an actual strategic layer. Pre-scouting and knowing enemy types becomes valuable. /The Witcher/ tried to flirt with this idea and tell us that the strength of a Witcher is in knowing the enemy, but it doesn't actually pay off on a mechanical level. This system would.
+
+****** Reduced Cognitive Load.
+
+During combat, you think about combat. When it's builds, you think about builds. You don't need to keep context-switching every five seconds. You can enter a proper flow state.
+
+****** Less Disbalance in Resource Economy
+
+In /Skyrim/, consumable economy collapses very quickly. Either you burn through supplies too fast for them to matter, or you hoard so many that you end the game with a mountain of scrolls and potions you never used. Balancing that so that every possible player is well-paced is basically impossible. But if you can do the math on the resource economy on the per-encounter basis, it becomes much easier and more tractable.
+
+****** Sensible Recovery Mechanics
+
+Every game mimicking D&D runs into trouble regarding the limits on “long rests.” Having unlimited long rests obviates a lot of challenges, but choosing a balanced way lo limit it is difficult. But if you return to base between missions anyway, boom — perfect place to recharge spell slots. No weird narrative gymnastics required.
+
+******  Actually Useful Base Building
+
+Houses in /Skyrim/ are places where you can store loot and save 10 gold on a tavern. Some people get a kick from walking around from chest to chest inside their giant gold-plated mansion, but I was always fine with the cheapest hovel in Windhelm. Here, bases are more important: they are the places for you to prepare between missions. Just don't get your base-building ideas from /Fallout 4/. Please.
+
+**** Afterword for people who confuse simulationism with realism
+
+If /Skyrim/ required you to sit down and take a poop soon after you eat, complete with a QTE-based butt-wiping mechanic, that would indeed be closer to physical reality, but it would really hurt the /fantasy realism/ of a hero from a Scandinavian myth.

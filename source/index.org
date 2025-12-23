@@ -1,0 +1,184 @@
+#+TITLE: Солнечная Империя
+#+OPTIONS: broken-links:mark
+
+#+ATTR_HTML: :style float:left;margin:0 5px 5px 0; max-height:250px;
+[[file:attachment/images/userpic.png]]
+
+Набор письмен Солнечной Принцессы.
+
+Известна, в основном, на сайте [[https://dm.am][dm.am]], вы, скорее всего, пришли оттуда.
+
+Оставить анонимный комментарий – [[https://www.admonymous.co/thesolarprincess][тут]].
+
+Связаться по почте – [[mailto:inbox@thesolarprincess.site][inbox@thesolarprincess.site]].
+
+Подписаться на обновления – [[file:feed_ru.rss][RSS]], [[file:feed_en.rss][RSS (english)]], [[https://t.me/solarbroadcast][Telegram]], [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], [[file:social.org][org-social]], или просто пишите на почту!
+
+#+HTML: <br><br><br><br>
+
+#+name: get-link
+#+begin_src emacs-lisp :exports none :var f="" :var path="blog/"
+      (with-temp-buffer
+        (insert-file-contents (concat path f ".org"))
+        (org-mode)
+        (let ((title (cadr (assoc "TITLE" (org-collect-keywords '("TITLE"))))))
+          (concat
+           "☀️ [[file:" path f ".org]"
+           "[" title "]]"))
+        )
+#+end_src
+
+
+#+MACRO: post #+CALL: get-link(f="$1") :results raw
+#+MACRO: fiction #+CALL: get-link(f="$1", path="fiction/") :results raw
+
+
+#+BEGIN_SRC emacs-lisp :results output :exports none
+(dolist (f (directory-files "blog/" nil "\.org"))
+  (princ (format "{{{post(%s)}}}\n" (file-name-sans-extension f))))
+#+END_SRC
+
+
+#+HTML: <p style="clear: left;"><hr></p>
+* -----
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: twocol
+:HTML_HEADLINE_CLASS: hidden
+:END:
+
+** Детский лагерь „Шепчущий Камень“
+
+{{{post(identitydisorders)}}}
+{{{post(identitydisorders2)}}}
+{{{post(pain)}}}
+{{{post(antinatalism)}}}
+{{{post(appealtonature)}}}
+{{{post(foeaddiction)}}}
+{{{post(happymary)}}}
+{{{post(hell)}}}
+{{{post(illuminati)}}}
+{{{post(momentofhappiness)}}}
+
+** Наша жизнь – игра
+
+{{{post(annoyingrpg)}}}
+{{{post(disconarrative)}}}
+{{{post(undertaledialogue)}}}
+{{{post(gamewalk)}}}
+{{{post(gamificationbad)}}}
+{{{post(hungrygale)}}}
+{{{post(plantsvszombies)}}}
+{{{post(skyrimbad)}}}
+{{{post(speedruns)}}}
+{{{post(tastinggraphics)}}}
+{{{post(terraformingmars)}}}
+
+
+* -----
+:PROPERTIES:
+:HTML_HEADLINE_CLASS: hidden
+:END:
+-----
+
+* -----
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: twocol
+:HTML_HEADLINE_CLASS: hidden
+:END:
+
+** ¡Viva la revolución!
+
+{{{post(socialism)}}}
+{{{post(coercion)}}}
+{{{post(pleasanttruth)}}}
+{{{post(healthcaremarket)}}}
+{{{post(substackbad)}}}
+{{{post(whatwoman)}}}
+
+** Все, кроме меня, неправы
+
+{{{post(badwords)}}}
+{{{post(causation)}}}
+{{{post(doomsday)}}}
+{{{post(vitamind)}}}
+{{{post(wirehead)}}}
+{{{post(likepolitics)}}}
+
+
+* -----
+:PROPERTIES:
+:HTML_HEADLINE_CLASS: hidden
+:END:
+-----
+
+
+* -----
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: twocol
+:HTML_HEADLINE_CLASS: hidden
+:END:
+
+** Эзотерики Эриды
+
+{{{post(copinhead)}}}
+{{{post(highenergyphilosophy)}}}
+{{{post(highenergylogic)}}}
+{{{post(toolvslaw)}}}
+{{{post(psychometaphysics)}}}
+
+** Матемагика
+
+{{{post(cryptoriddle)}}}
+{{{post(dilemmadilemma)}}}
+{{{post(factsandlogic)}}}
+{{{post(naivebayes)}}}
+{{{post(paradox)}}}
+{{{post(politicstopology)}}}
+
+
+* -----
+:PROPERTIES:
+:HTML_HEADLINE_CLASS: hidden
+:END:
+-----
+
+* -----
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: twocol
+:HTML_HEADLINE_CLASS: hidden
+:END:
+
+** Будуар
+
+{{{post(2025yuleboasting)}}}
+{{{post(gayidentity)}}}
+{{{post(platonicwoman)}}}
+{{{post(straightpeopledonotexist)}}}
+{{{post(transcyberpunk)}}}
+
+** Медиа-аналитическая некромантия
+
+{{{post(hazbinbad)}}}
+{{{post(ostap)}}}
+{{{post(papersplease)}}}
+{{{post(recognize)}}}
+{{{post(tadc)}}}
+
+
+* -----
+:PROPERTIES:
+:HTML_HEADLINE_CLASS: hidden
+:END:
+-----
+
+* -----
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: twocol
+:HTML_HEADLINE_CLASS: hidden
+:END:
+
+** Рассказы
+
+{{{fiction(godoftails)}}}
+{{{fiction(purelyhypothetically)}}}
+{{{fiction(cultureshock)}}}

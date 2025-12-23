@@ -1,0 +1,9 @@
+#+TITLE: Terraforming mars is a single-player game
+
+I had been roped into playing Terraforming Mars. It was one of the worst tabletop games I ever played, and I played Monopoly!
+
+The game has no [[https://www.gamedeveloper.com/design/what-is-yomi][yomi]], which is the only thing that makes competitive multiplayer interesting.
+
+The players barely interact. They tend to do their own things, trying to get the most victory points out of what they have. They don't particularly care what the other players are doing. There are exceptions like some betting on the commons, but, generally speaking, the advantage you get from knowing what other players are doing and what their plan is is negligible. By the midgame we stopped caring about hiding the cards in our hands – it's not like knowing another player's cards will help you in any way. Compare this to poker, Starcraft, Mafia, or even Rock-Paper-Scissors, where if you can read your opponent's mind you have basically won. And trying to do that is where the fun is.
+
+In Terraforming Mars all players are basically playing a single-player game and compete in who does it the best. As a single-player game it's passable; maybe you could make it better by removing all other players.

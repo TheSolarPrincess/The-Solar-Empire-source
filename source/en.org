@@ -1,0 +1,56 @@
+#+TITLE: The Solar Empire
+
+#+ATTR_HTML: :style float:left;margin:0 5px 5px 0; max-height:250px;
+[[file:attachment/images/userpic.png]]
+
+The writings of The Solar Princess.
+
+The canonical language of most of the things I write is Russian. The English texts are inexact translations, and only some texts are translated. If you understand both languages, read the [[file:index.org][Russian version]] of the site.
+
+Contact me by email – [[mailto:inbox@thesolarprincess.site][inbox@thesolarprincess.site]].
+
+Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russian)]] , [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], [[file:social.org][org-social]], or just email me!
+
+#+HTML: <p style="clear: left;"><hr></p>
+
+#+name: get-link
+#+begin_src emacs-lisp :exports none :var f="" :var path="blog/en/"
+      (with-temp-buffer
+        (insert-file-contents (concat path f ".org"))
+        (org-mode)
+        (let ((title (cadr (assoc "TITLE" (org-collect-keywords '("TITLE"))))))
+          (concat
+           "☀️ [[file:" path f ".org]"
+           "[" title "]]"))
+        )
+#+end_src
+
+
+#+MACRO: post #+CALL: get-link(f="$1") :results raw
+#+MACRO: fiction #+CALL: get-link(f="$1", path="fiction/") :results raw
+
+
+#+BEGIN_SRC emacs-lisp :results output :exports none
+(dolist (f (directory-files "blog/en/" nil "\.org"))
+  (princ (format "{{{post(%s)}}}\n" (file-name-sans-extension f))))
+#+END_SRC
+
+
+{{{post(annoyingrpg)}}}
+{{{post(cryptoriddle)}}}
+{{{post(disconarrative)}}}
+{{{post(doomsday)}}}
+{{{post(foeaddiction)}}}
+{{{post(hell)}}}
+{{{post(hungrygale)}}}
+{{{post(identitydisorders)}}}
+{{{post(identitydisorders2)}}}
+{{{post(psychometaphysics)}}}
+{{{post(papersplease)}}}
+{{{post(politicstopology)}}}
+{{{post(tadc)}}}
+{{{post(tastinggraphics)}}}
+{{{post(terraformingmars)}}}
+{{{post(undertaledialogue)}}}
+{{{post(wirehead)}}}
+{{{post(badwords)}}}

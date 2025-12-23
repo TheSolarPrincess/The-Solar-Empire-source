@@ -1,0 +1,33 @@
+:PROPERTIES:
+:DIR:      ~/Workspace/muse/source/attachment/images/hell/
+:END:
+#+TITLE: Hell inside my own head and emotional torture
+
+In /Unsong/, the forces of Hell made a political move of broadcasting to Earth what exactly is going in in Hell. [[https://unsongbook.com/interlude-%D7%99-the-broadcast/][The chapter where this happens]] is covered in military-grade trigger warnings and assurance that you don't need to read it to understand the story. Those trigger warnings weren't enough, the author had to add another layer of “no, I am serious”, and now I am adding yet another layer. As you can probably guess, it's not pretty in Hell.
+
+Moral philosopher Peter Singer has a cameo in this book. His main point is that people don't do good optimally. He pushes the typical spiel of “effective altruists” — yes, donating money to cure a child from cancer is all fine, but if instead you send the money to Africa in an organized fashion to cure malaria, you will save much more children per marginal dollar, so you should better do that.
+
+Pros and cons of this approach were analyzed by smarter people than I, and I don't have anything to add here. But unlike Peter Singer in the real world, the Unsong::Singer saw the broadcast. This left enough of an impression that he abandoned everything he had been working on and switched completely to a new idea — that the most important thing anybody could be doing, the deed of such ultimate importance that all good and evil in history, all horrors, all triumphs, are merely a rounding error.
+
+Compared to getting people out of Hell.
+
+--------------
+
+A less popular but still interesting ice breaker — what can be worse, physical or mental pain? What hurts more, lashes of the whip or public humiliation? Jump into the fire or lose your loved one? How do you even compare?
+
+Cluster headaches are also known as suicide headaches. They regularly show up on Reddit under “what is the worst pain you ever experienced”. In particular, women say that labor pain is nothing compared to cluster headaches.
+
+#+ATTR_HTML: :width 400px
+[[file:../../attachment/images/pain.png]]
+
+A long time ago I suffered from regular cluster headaches. Do you want to know my opinion on what pain is worse, physical or mental?
+
+It's mental. Obsessive-compulsive disorder can make cluster headaches feel like a slap on the wrist.
+
+It's possible that I misremember. Of course recent pain will stand out more compared to one that is literally separated from me by a wall of amnesia.
+
+It still left quite an impression.
+
+My mother often told me to become a psychiatrist — saying that maybe I can advance the craft and help the suffering. I said, then, that I don't want that because I don't think it's very interesting.
+
+But maybe interestingness should have been a rounding error.

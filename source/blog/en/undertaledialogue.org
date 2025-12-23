@@ -1,0 +1,29 @@
+#+TITLE: The mechanics of Undertale dialogues
+
+Let's keep talking about narrative design and dialogue mechanics. This time we'll take a look at dialogue mechanics of Undertale.
+
+“But, Princess” — nobody objects, — “There are barely any interactive dialogues in Undertale”
+
+Oh ye of little faith.
+
+The basic mechanic is very simple, using the standard visual novel logic. A character speaks — the text gradually types up in the window — the player can press X to skip the typing and show the entire text — if the entire text is on the screen, the player can press X to proceed to the nest statement.
+
+But Toby Fox did something I don't hear a lot about when people talk of Undertale — he gave the characters a voice.
+
+No, I don't mean the unique chirping sounds for every character. Those exist, yes. But the way the player interacts with the dialogue also has a voice!
+
+When Alphys begins chattering about her favorite anime, Mew Mew Kissy Cute, the logic of the interaction changes. Now whenever you press X during typing, it doesn't show up in entirety, but simply skips. And when the text is completed, it proceeds to the next statement instantly, without waiting for the player. This creates a clear impression that she is chattering without taking a breath, and you can't stop her.
+
+When you press Mettaton's button and turn him to his second form, he says “DID YOU. JUST FLIP. MY SWITCH”. But between those three phrases there is a forced pause — for the first 1-2 seconds you can't skip to the next statement. This gives it noticeable weight — it's not just a single sentence split in three parts, but a menacing robot, barely controlling his indignant fury, gradually turning towards the player.
+
+When Sans in the restaurant edgelords and says “Y O U D B E D E A D W H E R E Y O U S T A N D”, you can't skip this statement at all. You will listen to it. Letter by letter. This feels distinctly as “drastic change of tone”.
+
+If you ever replay the game, pay attention to details like that. The dialogues look inert, but in terms of interactivity they are masterfully choreographed. Yes, some of the tone is given my sounds, music, and fonts — but the way the text is presented also affects the rhythm and the speed of speech. Notice that the fans more-or-less agree what voice each character has — even though the game isn't voiced.
+
+This, to me, is one of the key aspects to why the characters are so charismatic. Of course, it's not enough on its own — music and sounds design also play a role — but it's the “secret sauce” that makes them so alive, empathetic and memorable. There are plenty of Undertale clones that copy large scale aspects of the design, story, or tropes. But the strength of Undertale is in the details. Talking to the characters, you can /feel/ the way they talk, but it's almost a ‘hidden' feature that you won't notice consciously, but that will affect you emotionally. It's something that can't be simply told instead of shown, and it's invisible if you watch a video or a stream of the game.
+
+And it's much more powerful than normal voice acting! I'm not trying to say that Toby Fox didn't have enough money to hire voice actors and had to make do. Normal voice acting is not interactive — it doesn't matter how good the actor is, he can at best give you a static audio file. The way Toby “voices” his game is fundamentally interactive, with the game reacting to the player's actions on the scale of seconds. Is the player passively listening? Or skipping? Is he reading it slowly, or quickly? Is it critical info or filler to him? Did he just stop to think? In a normal voiced like those would sound the same; you can't convey the feeling of “I am trying to get her to shut up but she just doesn't listen and keeps chirping”.
+
+Interactivity is the main strength of video games as an artistic medium. But interactivity isn't just “gameplay” or “story branches”. By correctly working out the minute interactions with the player, you can convey something that “static” media never could. Toby Fox managed to create an interactive voice acting — and cheaply!
+
+His games have a lot of this kind of minutia that are invisible if you just read reviews, but that still transform the experience, maybe later I'll highlight some more of them. And those are the reason why I think he is a genius.
