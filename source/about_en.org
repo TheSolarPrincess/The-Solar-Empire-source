@@ -1,0 +1,22 @@
+#+TITLE: The Solar Empire
+
+#+ATTR_HTML: :style float:left;margin:0 5px 5px 0; max-height:250px;
+[[file:attachment/images/userpic.png]]
+
+* About me
+
+I am The Solar Princess, a Malkavian elder, a Discordian witch, a pretty pony princess.
+
+Or, less poetically, I am a mathematician, a game designer, a Discordian, a socialist, and a wannabe psychiatrist.
+
+I write [[file:en.org][all sorts of things]] about those topics, and others.
+
+I lived most of my life in Russia, but had to take political refuge in Argentina. I like it here.
+
+* Socials
+
+Email:  [[mailto:TheSunWorshipper@proton.me][TheSunWorshipper@proton.me]] – you can write to me about anything.
+[[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]]
+[[https://thesolarprincess.substack.com/][Substack]]
+[[https://t.me/solarbroadcast][Telegram]] (mostly in Russian)
+[[https://mastodon.social/@thesolarprincess][Mastodon]]

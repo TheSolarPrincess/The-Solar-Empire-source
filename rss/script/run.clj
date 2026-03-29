@@ -2,6 +2,7 @@
   (:require [clj-rss.core :as rss]
             [babashka.fs :as fs]
             [clojure.string :as str]
+            [clojure.edn :as edn]
             ))
 
 (defn extract-body [html-content]
@@ -78,54 +79,98 @@
              data)
 
         ]
+
+
     #_(print (map :title data))
     (spit "./feed_ru.rss" out)))
 
-(defn -main-en []
-  (let [dir "./data-en"
-        url #(str/replace-first % "data-en" "https://thesolarprincess.site/blog/en")
-        files (fs/glob dir "**{.htm,html}")
-        builder #(into {
-                        :title (extract-title (nth % 2))
-                        :description (extract-body (nth % 2))
-                        :link (nth % 0)
-                        :author "inbox@thesolarprincess.site"
-                        }
-                       (if (nil? (nth % 1)) {} {:pubDate (nth % 1)}))
-        urls (->>
-              files
-              (map str)
-              (map url)
-              (into []))
+(de(defn -main-en []
+     (let [dir "./data-en"
+           url #(str/replace-first % "data-en" "https://thesolarprincess.site/blog/en")
+           files (fs/glob dir "**{.htm,html}")
+           builder #(into {
+                           :title (extract-title (nth % 2))
+                           :description (extract-body (nth % 2))
+                           :link (nth % 0)
+                           :author "inbox@thesolarprincess.site"
+                           }
+                          (if (nil? (nth % 1)) {} {:pubDate (nth % 1)}))
+           urls (->>
+                 files
+                 (map str)
+                 (map url)
+                 (into []))
 
-        datetimes (as->
-                      files x
-                    (map str x)
-                    (map #(clojure.string/split % #"/") x)
-                    (map last x)
-                    (map dates-en x)
-                    (map format-time x)
-                    )
+           datetimes (as->
+                         files x
+                       (map str x)
+                       (map #(clojure.string/split % #"/") x)
+                       (map last x)
+                       (map dates-en x)
+                       (map format-time x)
+                       )
 
-        data (->>
-              files
-              (map str)
-              (map slurp)
-              (map vector urls datetimes)
-              (sort-entries)
-              (map builder)
-              (into []))
-        out (rss/channel-xml
-             {:title "Solar Flares"
-              :link "https://thesolarprincess.site/en"
-              :description "Collected writings of the Solar Princess"}
-             data)
+           data (->>
+                 files
+                 (map str)
+                 (map slurp)
+                 (map vector urls datetimes)
+                 (sort-entries)
+                 (map builder)
+                 (into []))
+           out (rss/channel-xml
+                {:title "Solar Flares"
+                 :link "https://thesolarprincess.site/en"
+                 :description "Collected writings of the Solar Princess"}
+                data)
 
-        ]
-    (spit "./feed_en.rss" out)))
+           ]
+       (spit "./feed_en.rss" out)))fn process [data]
+   (let [dir "./data-en"
+         url #(str/replace-first % "data-en" "https://thesolarprincess.site/blog/en")
+         files (fs/glob dir "**{.htm,html}")
+         builder #(into {
+                         :title (extract-title (nth % 2))
+                         :description (extract-body (nth % 2))
+                         :link (nth % 0)
+                         :author "inbox@thesolarprincess.site"
+                         }
+                        (if (nil? (nth % 1)) {} {:pubDate (nth % 1)}))
+         urls (->>
+               files
+               (map str)
+               (map url)
+               (into []))
+
+         datetimes (as->
+                       files x
+                     (map str x)
+                     (map #(clojure.string/split % #"/") x)
+                     (map last x)
+                     (map dates-en x)
+                     (map format-time x)
+                     )
+
+         data (->>
+               files
+               (map str)
+               (map slurp)
+               (map vector urls datetimes)
+               (sort-entries)
+               (map builder)
+               (into []))
+         out (rss/channel-xml
+              {:title "Solar Flares"
+               :link "https://thesolarprincess.site/en"
+               :description "Collected writings of the Solar Princess"}
+              data)
+
+         ]
+     (spit "./feed_en.rss" out)))
 
 (defn -main []
-  (-main-ru)
-  (-main-en))
+  (let [file-path (first *command-line-args*)
+        data      (edn/read-string (slurp file-path))]
+    (process data)))
 
 (-main)

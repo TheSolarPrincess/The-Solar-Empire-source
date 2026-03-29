@@ -7,9 +7,9 @@ The writings of The Solar Princess.
 
 The canonical language of most of the things I write is Russian. The English texts are inexact translations, and only some texts are translated. If you understand both languages, read the [[file:index.org][Russian version]] of the site.
 
-Contact me by email – [[mailto:inbox@thesolarprincess.site][inbox@thesolarprincess.site]].
+Contact me by email – TheSunWorshipper@proton.me
 
-Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russian)]] , [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], [[file:social.org][org-social]], or just email me!
+Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russian)]], [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], @@html:<a href="social.org">org-social</a>@@ , or just email me!
 
 #+HTML: <p style="clear: left;"><hr></p>
 

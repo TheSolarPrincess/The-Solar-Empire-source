@@ -6,13 +6,9 @@
 
 Набор письмен Солнечной Принцессы.
 
-Известна, в основном, на сайте [[https://dm.am][dm.am]], вы, скорее всего, пришли оттуда.
+Связаться по почте – TheSunWorshipper@proton.me
 
-Оставить анонимный комментарий – [[https://www.admonymous.co/thesolarprincess][тут]].
-
-Связаться по почте – [[mailto:inbox@thesolarprincess.site][inbox@thesolarprincess.site]].
-
-Подписаться на обновления – [[file:feed_ru.rss][RSS]], [[file:feed_en.rss][RSS (english)]], [[https://t.me/solarbroadcast][Telegram]], [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], [[file:social.org][org-social]], или просто пишите на почту!
+Подписаться на обновления – [[file:feed_ru.rss][RSS]], [[file:feed_en.rss][RSS (english)]], [[https://t.me/solarbroadcast][Telegram]], [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], [[https://mastodon.social/@thesolarprincess][Mastodon]], @@html:<a href="social.org">org-social</a>@@ , или просто пишите на почту!
 
 #+HTML: <br><br><br><br>
 
@@ -150,7 +146,6 @@
 
 ** Будуар
 
-{{{post(2025yuleboasting)}}}
 {{{post(gayidentity)}}}
 {{{post(platonicwoman)}}}
 {{{post(straightpeopledonotexist)}}}

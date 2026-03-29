@@ -1,5 +1,6 @@
 .DS_Store
 
+Archive
 out/*
 .dir-locals.el
 .hypb

@@ -1,0 +1,20 @@
+#+TITLE: Солнечная Империя
+
+#+ATTR_HTML: :style float:left;margin:0 5px 5px 0; max-height:250px;
+[[file:attachment/images/userpic.png]]
+
+* About me
+
+Солнечная Принцесса, старейшина Малкавиан, Дискордианская ведьма, принцесса-аликорн.
+
+Или, менее поэтически: математик, гейм-дизайнер, социалист, ваннаби-психиатр. [[file:index.org][Пишу об этом]] и о многом другом.
+
+Большую часть жизни я жила в России, но сейчас сбежала в Аргентину. Здесь хорошо! Как из Мордора в Понивилль!
+
+* Socials
+
+Email: [[mailto:TheSunWorshipper@proton.me][TheSunWorshipper@proton.me]] – можно писать по поводу чего угодно.
+[[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]]
+[[https://thesolarprincess.substack.com/][Substack]]
+[[https://t.me/solarbroadcast][Telegram]]
+[[https://mastodon.social/@thesolarprincess][Mastodon]]

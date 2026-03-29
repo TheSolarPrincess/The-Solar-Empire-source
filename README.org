@@ -1,4 +1,4 @@
-This is the source code of my website, [[https://thesolarprincess.site/][The Solar Empire]]. It‘s for my personal use, but if you want to fork it and make your own website, go ahead.
+This is the source code of my website, [[https://thesolarprincess.github.io/][The Solar Empire]]. It‘s for my personal use, but if you want to fork it and make your own website, go ahead.
 
 ** Raison d'être
 

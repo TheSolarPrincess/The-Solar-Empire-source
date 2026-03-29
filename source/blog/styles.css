@@ -1,0 +1,92 @@
+html { font-size: clamp(16px, 1.2vw, 20px); }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('../attachment/longquiet-seamless.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: top left;
+}
+body, h1, h2, h3, p, li, td, th {
+    color: #ffffff !important;
+    text-shadow:
+        -1px -1px 0 #000000,
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+}
+h1, h2, h3 {
+    text-align: center !important;
+}
+a {
+    color: #ffaaaa !important;
+    text-decoration: underline;
+    text-shadow:
+        -1px -1px 0 #000000,
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+}
+a:visited {
+    color: #cc8888 !important;
+    text-shadow:
+        -1px -1px 0 #000000,
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+}
+a:hover {
+    color: #cc8888 !important;
+    text-shadow:
+        -2px -2px 0 #000000,
+         2px -2px 0 #000000,
+        -2px  2px 0 #000000,
+         2px  2px 0 #000000;
+}
+.sidebar-block {
+    float: right; width: 30%;
+    margin-left: 20px; padding: 15px;
+    /*background-image: url('bg.jpg');
+    background-size: cover; color: white;*/
+    background-color: #222222;
+    border-radius: 8px; }
+
+
+.center-block {
+    width: 80%;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-self: center;
+    /*background-image: url('bg.jpg');
+    background-size: cover; color: white;*/
+    background-color: #222222;
+    border-radius: 8px; }
+
+.sidebar-block-left {
+    float: left; width: 25%;
+    margin-right: 20px;
+    margin-left: 2px; padding: 5px;
+    /*background-image: url('bg.jpg');
+    background-size: cover; color: white;*/
+    background-color: #222222;
+    border-radius: 8px; }
+
+.hidden { display: none; }
+
+span.figure-number {
+  display: none;
+}
+
+
+.princess-words {
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 1px pink;
+  /*text-shadow:
+    -0.1px -0.1px 0 pink,
+     0.1px -0.1px 0 pink,
+    -0.1px  0.1px 0 pink,
+     0.1px  0.1px 0 pink;*/
+}

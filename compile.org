@@ -1,0 +1,194 @@
+#+NAME: base-directory
+#+begin_src elisp :results value
+  (file-name-directory (or (buffer-file-name) default-directory))
+#+end_src
+
+#+NAME: expand-path
+#+begin_src elisp :results value :var dir=base-directory
+  (expand-file-name fn dir)
+#+end_src
+
+#+CALL: expand-path(fn="rot.png")
+
+#+NAME: read-file
+#+begin_src elisp :results value
+(with-temp-buffer
+      (insert-file-contents file)
+      (buffer-string))
+#+end_src
+
+
+#+NAME: headers
+#+begin_src clojure :results value :var dir=base-directory
+  (def files
+    (->> (fs/glob "./source" "**{.org}")
+         (map str) (map #(subs % (count "source/")))))
+
+  #_(def files
+      (->> (fs/glob "./source" "**{.org}")
+           (map str)
+           (map
+            (fn [path]
+              {:full-path path
+               :rel-path (subs file (count "source/"))
+               :filename (last (clojure.string/split path #"/"))
+               :html-rel-path (clojure.string/replace (subs file (count "source/")) ".org" ".html")})))
+      (into [] ))
+
+  (defn mk [value]
+    (str "<nav id=\"org-div-home-and-up\">" value "</nav>"))
+
+  (defn mk-a [[link text]]
+    (if link
+      (format "<a href=\"/%s\">%s</a>" link text)
+      (format "<span>%s</span>" text)))
+
+  (defn mk-navbar [as]
+    (str
+     "<nav id=\"org-div-home-and-up\">"
+     (->> as (map mk-a) (clojure.string/join " | "))
+     "</nav>"))
+
+  (defn header [rel-path]
+    (mk-navbar
+     (cond
+       (clojure.string/starts-with? rel-path "blog/en")
+       (let [ruv (clojure.string/replace rel-path "blog/en" "blog/ru")]
+         (if (some #{ruv} files)
+           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "Main page"]] [["en.html" "Main page"]]))
+
+       (clojure.string/starts-with? rel-path "blog/ru")
+       (let [env (clojure.string/replace rel-path "blog/ru" "blog/en")]
+         (if (some #{env} files)
+           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "Главная страница"]] [["ru.html" "Главная страница"]]))
+
+       (clojure.string/starts-with? rel-path "fiction/en")
+       (let [ruv (clojure.string/replace rel-path "fiction/en" "source/fiction/ru")]
+         (if (some #{ruv} files)
+           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "Main page"]] [["en.html" "Main page"]]))
+
+       (clojure.string/starts-with? rel-path "fiction/ru")
+       (let [env (clojure.string/replace rel-path "fiction/ru" "source/fiction/en")]
+         (if (some #{env} files)
+           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "Главная страница"]] [["ru.html" "Главная страница"]]))
+
+       (= rel-path "index.org")
+       [["en.html" "🇺🇸 English version"]]
+
+       (= rel-path "ru.org")
+       [["en.html" "🇺🇸 English version"]]
+
+       (= rel-path "en.org")
+       [["ru.html" "🇷🇺 Русская версия"]]
+
+       (= rel-path "about_ru.org")
+       [["en.html" "🇺🇸 English version"]]
+
+       (= rel-path "about_en.org")
+       [["ru.html" "🇷🇺 Русская версия"]]
+       )))
+
+  (def table
+    (into
+     []
+     (for [file files]
+       [(str dir "source/" file) (header file)]
+       )))
+  table
+#+end_src
+
+#+NAME: export
+#+begin_src elisp  :var full-rebuild=1 dir=base-directory tbl=headers :result output
+  (defun temp/path (fn) (expand-file-name fn dir))
+
+  (let (;(org-publish-use-timestamps-flag nil)
+        (org-confirm-babel-evaluate nil)
+        (org-html-include-default-figure nil)
+        (org-export-default-language "ru")
+        (org-export-allow-bind-keywords t)
+                                          ;(org-html-postamble nil)
+        (org-publish-project-alist
+         `(
+           ("orgfiles"
+            :base-directory ,(temp/path "source/")
+            :publishing-directory ,(temp/path "out/")
+            :exclude "^social\\.org$"
+            :publishing-function org-html-publish-to-html
+            :recursive t
+            :preserve-breaks t
+            :with-author nil
+            :with-broken-links nil
+            :section-numbers nil
+            :exclude-tags ("noexport")
+            :html-self-link-headlines nil
+            :with-latex t
+            :with-toc nil
+            :with-tables t
+            :with-tags nil
+            :with-tasks nil
+            :with-timestamps t
+            :with-title t
+            :auto-sitemap nil
+            ;; :sitemap-title "The Solar Empire"
+            ;; :sitemap-filename "index.html"
+            :html-doctype "html5"
+            :html-subtitle "Website of The Solar Princess"
+            :html-head-include-default-style nil
+            :html-use-infojs nil
+            :html-preamble t
+            :html-postamble nil
+            :sitemap-style list
+            :sitemap-sort-files alphabetically
+            ;; :makeindex t
+            :html-html5-fancy t
+            :html-head "<link rel=\"stylesheet\" href=\"/assets/css/style.css\">"
+            ;;:html-head-extra
+            :html-footnotes-section "<hr> %2$s"
+            )
+           ("attachments"
+            :base-directory ,(temp/path "source/attachment")
+            :recursive t
+            :publishing-directory  ,(temp/path "out/attachment")
+            :base-extension any
+            :publishing-function org-publish-attachment
+            )
+           ("assets"
+            :base-directory ,(temp/path "source/assets")
+            :recursive t
+            :publishing-directory  ,(temp/path "out/assets")
+            :base-extension any
+            :publishing-function org-publish-attachment
+            )
+
+           ))
+        )
+
+    (let ((files (directory-files "source/blog/ru" t "\\.org\\'")))
+      (dolist (file files)
+        (copy-file file (expand-file-name (file-name-nondirectory file) "source/blog") t)))
+
+    (let ((files (directory-files "source/fiction/ru" t "\\.org\\'")))
+      (dolist (file files)
+        (copy-file file (expand-file-name (file-name-nondirectory file) "source/fiction") t)))
+
+    (let ((alist (mapcar (lambda (row) (cons (elt row 0) (elt row 1))) tbl))
+          (get-heading (lambda (filepath) (cdr (assoc filepath alist)))))
+      (defun temp/org-set-head-extra (backend)
+        (when (org-export-derived-backend-p backend 'html)
+          (let* ((file (buffer-file-name))
+                 (extra (funcall get-heading buffer-file-name)))
+            (setq-local org-html-head-extra extra)
+                                          ;(message "-> %s <–> %s |" org-html-head-extra buffer-file-name)
+            )))
+
+      (add-hook 'org-export-before-processing-hook #'temp/org-set-head-extra)
+      (org-publish-all)
+      (remove-hook 'org-export-before-processing-hook #'temp/org-set-head-extra))
+    (copy-file "out/index.html" "out/ru.html" t)
+    (copy-file "source/social.org" "out/" t)
+    (shell-command "bb --config rss/bb.edn rss/script/run-static.clj rss.edn")
+    )
+#+end_src
+
+#+RESULTS: export
+: 0

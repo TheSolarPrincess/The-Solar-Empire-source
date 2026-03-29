@@ -10,7 +10,7 @@
        (org-publish-project-alist
         `(
           ("rufiles"
-           :base-directory "../source/blog"
+           :base-directory "../source/blog/ru"
            :publishing-directory "./data/"
            :publishing-function org-html-publish-to-html
            :recursive nil

@@ -1,0 +1,614 @@
+#+TITLE: The Solar Empire
+#+NICK: SolarPrincess
+#+DESCRIPTION: Game designer, LGBT activist, mathematician, Social Justice Rogue, Discordian witch, hobbyist doctor (yes)
+#+AVATAR: https://thesolarprincess.github.io/attachment/images/userpic.png
+#+LINK:  https://thesolarprincess.github.io
+#+FOLLOW: Andros https://andros.dev/static/social.org
+#+FOLLOW: https://teoten.com/social.org
+#+FOLLOW: https://omidmash.de/social.org
+#+FOLLOW: https://jackbaty.com/social.org
+#+GROUP: Emacs https://org-social-relay.andros.dev
+#+GROUP: Random https://org-social-relay.andros.dev
+#+GROUP: Org Mode https://org-social-relay.andros.dev
+#+GROUP: Org Social https://org-social-relay.andros.dev
+#+CONTACT: mailto:tsolarprincess@gmail.com
+#+CONTACT: https://t.me/TSolarPrincess
+
+#+FOLLOW: skrlet13 https://www.skrlet13.xyz/social.org
+#+FOLLOW: johnhamelink https://johnhame.link/social.org
+#+FOLLOW: adsan https://adsan.dev/social.org
+#+FOLLOW: org-social https://host.org-social.org/org-social/social.org
+* Posts
+** 
+:PROPERTIES:
+:ID:  2025-10-16T23:00:00-0300
+:LANG: en
+:END:
+
+Hello, universe!
+I am The Solar Princess. I very much like the idea of Org Social, and I‘ll repost my blog here. I mostly write about psychiatry, game design, politics.
+Posts are available at [[http://thesolarprincess.site][my website]]; I will start reposting them here. Please react or reply if you are reading this, as I want to know you.
+
+** 
+:PROPERTIES:
+:ID: 2025-10-17T03:01:57-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://teoten.com/social.org#2025-10-17T06:32:10+0200
+:MOOD: 🌅
+:END:
+
+** 
+:PROPERTIES:
+:ID: 2025-10-17T03:11:36-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+As a recovering expert in communication protocols, I occasionally try to write what I know.
+
+I was thinking about one-way functions and storing passwords in hashes, and I got that idea — that you also can use it for primitive “ciphers” like “the tiger is out of the cage”. You can adopt this plot twist into a story or a game if you want.
+
+An important NPC asks the players a riddle. The riddle is difficult, contrived, confusing, and overall not very well-designed. The assumption is that the players can't possibly solve it, but if you tell them the answer, they would understand that it's the correct one. The riddle would probably contain a lot of extremely specific conditions that don't send you down any specific trains of thought.
+
+Later, having forgotten about the riddle and not thinking it to be very important, the players meet that NPC again, and they suspect it can be an impostor pretending to be them. The problem is that the impostor can read their thoughts!
+
+Whatever question you think of of the form “what only the real NPC would know”, he would know what answer can satisfy you. If you try to provoke him to do something, he would know what behavior you expect. Whatever method you can think of to tell the real deal from an impostor, he will know exactly what to do to make you decide that he is real. He knows everything you know, can anticipate and avoid any of your traps, he is immune to deception and misdirection. It seems like this is unsolvable — the impostor can fully imitate the original (as far as you know them); whatever idea you have in mind, he can behave exactly like you expect the original to behave.
+
+But there is a creative solution for a resourceful protagonist! Just ask him for the answer to the riddle. The original can simply tell it to you, you can verify that the answer is correct, and you would know it's the original. But the impostor doesn't know the answer! He can probe your thoughts for the riddle, but he can't learn the answer, because you don't know it either. He knows what you expect to hear, but he can never know the exact words — it's a one-way function, you can check if the answer is correct, but you can't find the answer. The impostor won't be able to answer the riddle.
+
+It would be cool to add ZKP to the mix, so that you can repeat the trick any number of times — otherwise it only works once; if you learn the answer, every further impostor would know it as well. But you can make your players to carry code books with riddles for each other, that would be amazing.
+
+** 
+:PROPERTIES:
+:ID: 2025-10-17T19:32:13-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+So, err, I‘m using org-social.el, and it‘s not clear at all if a post in my timeline is its own post or a reply (to me or otherwise)? I have to enter the profile and read the raw file and look at the reply link. Is it supposed to be like that?
+
+** 
+:PROPERTIES:
+:ID: 2025-10-17T23:51:37-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+Re: [[https://files.catbox.moe/gp6pk8.webp][screenshot]] [[https://flyinglionwithabook.substack.com/p/humes-argument-against-miracles-is][source]]
+
+Inability to distinguish between A->B and B->A seems to me to be the single most common logical fallacy you can see in the wild. Even when people write out their arguments step-by-step, they can‘t avoid it; not to mention informal speech. Even those who think of themselves as intellectuals have trouble understanding that every apple is a fruit but not every fruit is an apple.
+
+** 
+:PROPERTIES:
+:ID: 2025-10-18T21:22:50-0300
+:LANG: en
+:CLIENT: org-social.el
+:REPLY_TO: https://johnhame.link/social.org#2025-10-18T23:57:21+0100
+:POLL_OPTION: Laptop keyboard
+:END:
+
+I‘m on a laptop. Never had a fancy keyboard, even when on desktop, because my hardware doesn‘t last very long. I‘m just physically very destructive. Even for my computer chair, I use a stool; any fancy chair gets wrecked within a couple months.
+
+Yes, I strongly spiritually identify with the fire-benders.
+
+** 
+:PROPERTIES:
+:ID: 2025-10-24T12:33:24-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://andros.dev/static/social.org#2025-10-22T12:47:33+0200
+:END:
+
+Decentralization is always better!
+
+** 
+:PROPERTIES:
+:ID: 2025-10-30T21:48:49-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://codeberg.org/eludom/org-social/raw/branch/main/social.org#2025-10-30T17:05:34-0400
+:END:
+
+Elfeed is so much better than anything else I‘ve tried that it‘s not even funny.
+
+** 
+:PROPERTIES:
+:ID: 2025-10-31T19:29:43-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://zweili.ch/org-social/social.org#2025-10-31T20:04:14+0100
+:END:
+
+Yeah, Magit is great to learn Git, and I think more things should be structured that way.
+I remember before I kmew about Magit, I was teaching Git to some high schoolers, and I was thinking that a legible UI for Git that can do anything without obscuring what‘s going on under the hood would have been awesome. My wish retroactively came true!
+
+** 
+:PROPERTIES:
+:ID: 2025-10-31T19:31:52-0300
+:CLIENT: org-social.el
+:END:
+
+I‘ve never celebrated Halloween because it‘s not really a thing in my country.
+Then I moved to Argentina and I expected to celebrate, but it seems like no one is doing Halloween here either.
+Sad
+
+** 
+:PROPERTIES:
+:ID: 2025-11-11T03:50:10-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+There is a language field in org-social.el. Do people filter by language? If I start posting in Russian, would I just litter the feeds of people who don‘t speak Russian?
+
+** 
+:PROPERTIES:
+:ID: 2025-12-02T21:36:59-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+I have finally coded an RSS feed for my blog, automatically generated on org-html-export, works perfect with Elfeed. Try it!
+[[https://thesolarprincess.site/feed_en.rss][Russian]]
+[[https://thesolarprincess.site/feed_en.rss][English]]
+
+(if you speak both languages, pick Russian)
+
+** 
+:PROPERTIES:
+:ID: 2025-12-02T21:46:32-0300
+:LANG: en
+:TAGS: emacs
+:CLIENT: org-social.el
+:END:
+
+Using Emacs made me understand why Tinkers in Worm don't give their tech to teammates. Some things really do only work because of your constant tinkering, and would spontaneously combust if you give them to anyone else.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T14:07:12-0300
+:CLIENT: org-social.el
+:TAGS: emacs rss
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-03T12:51:33+0100
+:END:
+
+[[org-social:https://host.org-social.org/andros/social.org][andros]], org-publish. RSS using a Babashka utility. I plan to upload the full source code, once I clean it up and remove the hardcoded personal data and other stuff; right now generating different language versions is quite spaghetti. I‘ll post the github here when I‘m done.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T15:49:37-0300
+:LANG: en
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-03T12:47:48+0100
+:MOOD:
+:END:
+
+[[org-social:https://host.org-social.org/andros/social.org][andros]], what is the least insane way to have it displayed at the top of my agenda, before all the actual agenda stuff? I‘m using org-super-agenda
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T16:01:46-0300
+:LANG: en
+:CLIENT: org-social.el
+:POLL_END: 2025-12-06T16:01:46-0300
+:END:
+
+You're Spider-Man hanging upside-down, and you want to give someone a thumbs-up 👍. Will you point the finger...
+
+- [ ] Up relative to you, down relative to them
+- [ ] Down relative to you, up relative to them
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T18:06:44-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-03T19:40:49+0100
+:MOOD: 😉
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T19:34:26-0300
+:LANG: en
+:POLL_OPTION: Yes
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-11-26T09:03:48+0100
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T19:35:24-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://teletyp.ist/social.org#2025-11-25T21:18:56+0100
+:MOOD: 💜
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T19:45:34-0300
+:LANG: en
+:TAGS: gaming
+:CLIENT: org-social.el
+:TAGS: gaming
+:END:
+
+The experience of playing a Japanese game:
+
+---
+
+#+BEGIN_QUOTE
+Player: clicks on NPC
+
+NPC: Hi! (three-second pause) I sell potions! (three-second pause) Do you want to buy a potion?
+
+Player: no /thinking: damn, I misclicked, I wanted to buy potions/
+
+NPC: All right! (three-second pause) If you want to buy potions, talk to me!
+
+Player: clicks on NPC
+
+NPC: Hi! (three-second pause) I sell potions! (three-second pause) Do you want to buy a potion?
+
+Player: yes
+
+NPC: Great! I’ll show you the potions now (three-second pause) Which potion do you want to buy?
+
+Player: healing potion
+
+NPC: Great! A healing potion costs 300 rupees. (three-second pause) Do you agree to that price?
+
+Player: yes
+
+NPC: Good, here is your healing potion! (ten-second unskippable animation of the potion appearing in the inventory) Do you want to buy anything else?
+
+Player: yes
+
+NPC: Great! I’ll show you the potions now (three-second pause) Which potion do you want to buy?
+
+Player: healing potion
+
+NPC: Great! A healing potion costs 300 rupees. (three-second pause) Do you agree to that price?
+
+Player: yes
+
+NPC: Good, here is your healing potion! (ten-second unskippable animation of the potion appearing in the inventory) Do you want to buy anything else?
+
+Player: No
+
+NPC: All right! (three-second pause) If you want to buy potions, talk to me!
+
+Player: ok
+
+Player: walks two steps away from the NPC
+
+Another NPC: Oh! (three-second pause) How nice that I saw you! (three-second pause) Have I told you that you can use A button to talk to NPCs? (three-second pause) Some even sell potions!
+
+Player: throws the controller the fuck away
+#+END_QUOTE
+
+---
+
+Why are Japanese games like this? Breath of the Wild, Persona, Pikmin, Pokémon, Ni no Kuni — they're all allergic to convenience. Every tiny thing triggers long dialogues which, even if you skip and button mash through them, still take about three seconds per line, and they keep repeating and repeating and REPEATING. If you click the wrong thing by accident — you’ve lost a whole minute of your life. When I tried playing Pikmin 4, I was constantly annoyed at the beginning that I couldn’t get five seconds of uninterrupted gameplay without a break for some very slow bullshit. The Japanese need an ethnic version of Half-Life 2 to show them that players have enough IQ to walk and listen at the same time
+
+** 
+:PROPERTIES:
+:ID: 2025-12-03T22:12:09-0300
+:LANG: en
+:GROUP: Org Social https://org-social-relay.andros.dev
+:CLIENT: org-social.el
+:END:
+
+So. [[https://thesolarprincess.github.io/social.org#2025-12-03T19:45:34-0300][That]] was a relatively long post, and it successfully ate my entire timeline screen space. I could theoretically wipe it with a longcat, 2000s style. While I don‘t think there should be post size limits, maybe there should be an optional feature in the client, to clip posts longer than X symbols behind a „read more“ button. That button should just unclip the post and display it in the timeline normally.
+
+
+[[org-social:https://host.org-social.org/andros/social.org][andros]], what do you think?
+
+** 
+:PROPERTIES:
+:ID: 2025-12-04T00:02:50-0300
+:LANG: en
+:CLIENT: org-social.el
+:GROUP: Random https://org-social-relay.andros.dev
+:MOOD: 
+:END:
+
+So, „random“ means anything goes? Err... let me break the ice with a pun.
+
+They call me Cluster Bomb 'cause my Cluster B personality disorders pose risks to civilians
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-04T20:38:42-0300
+:LANG: en
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+O wow, an actual philosopher with a diploma [[https://benthams.substack.com/p/against-asking-for-definitiosn][agrees with me]] that asking for definitions is bad!
+
+I‘ve always said that asking for an exact definition is the surest way to derail the conversation from the actual point. You know nothing constructive will be said once someone asks for the definition of the word you just said.
+
+But now, it‘s not just my personal bee in a bonnet, but a fully-fledged niche position.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-06T22:48:01-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://johnhame.link/social.org#2025-12-06T23:31:09+0000
+:MOOD: 👍
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-09T00:51:12-0300
+:LANG: ru
+:CLIENT: org-social.el
+:END:
+
+Интересный эксперимент в социальной психологии бесхвостых обезьян со [[attachment/images/social/зкшву.jpg][прайда в Мар дель Плата]].
+Я иду быстрее, чем парад, мне надо постоянно корректировать скорость сознательно, иначе я ухожу вперед. Пару раз я замечала, что ушла вперед своей компании, и перебегала обратно к ним. Потом решила черт с ним, буду идти как идется. Китайский метод "ждать пока по реке проплывет труп твоего врага" сработал — компашка уже пришла ко мне, в самый перед. 
+Идущие впереди парада с транспарантом не оглядываются и, видимо, корректируют свою скорость согласно жопочуйству по людям сзади. Так как наша компашка вплотную к ним притиралась, они шли быстрее, чем ожидали. В итоге мы все вместе ушли вперед второй колонны парада, они отставали относительно нас. Когда мы уже второй раз ушли достаточно вперед, что приходилось останавливаться и ждать, я поняла, почему это происходит, сдала назад, и остальной парад больше не отставал.
+Но тем не менее, значительную часть парада в авангарде шли русские и беларусы.
+И нас снимали, в том числе с дрона.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-09T00:52:37-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+Being on a [[attachment/images/social/зкшву.jpg][LGBT Pride March in Mar del Plata]] these weekends, I had an interesting observation into the social psychology of humans.
+I‘m walking faster than the parade, so I need to deliberately correct my speed not to leave my Russian-speaking friends behind. A couple of times I noticed that I had pulled ahead of my group and ran back to them. Then I thought, fuck it, I’ll just walk at my own pace. The Chinese method of “sitting by the riverbank long enough to see the corpse of your enemy float by” worked — my group eventually caught up to me, right at the very front of the parade.
+The people carrying the banner at the front of the parade don’t look backward and probably sense with their asses how close the rest of the crowd is to them, adjusting their speed accordingly. Since our little gang was glued right to their backs, they were walking faster than they expected. As a result, all of us together pulled far ahead of the second column of the parade; that second column was lagging behind us. By the second time we had pulled ahead so far that we had to stop and wait, I figured out what was happening, slowed down back a bit, and after that the rest of the parade no longer fell behind.
+But still, for a significant part of the parade, the ones leading the vanguard were Russians and Belarusians. You will probably see me on the news, recorded from a drone.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-09T01:04:04-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+So I just posted the same thing twice, one in English and one in Russian. If someone needs to see if their language filters work or something, take heed.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-09T01:07:10-0300
+:LANG: en
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+So, [[https://preview.org-social.org/?post=https%3A%2F%2Fthesolarprincess.site%2Fsocial.org%232025-12-03T16%3A01%3A46-0300][this poll]] has finished, where do I see the results? Are they going to appear in anyone‘s timeline? Where do I see it?
+
+** 
+:PROPERTIES:
+:ID: 2025-12-09T14:35:05-0300
+:LANG: en
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-09T10:56:53+0100
+:MOOD: 
+:END:
+
+I don‘t see it in the client.
+
+[[https://i.imgur.com/Ac0W08m.png][org-social client]]
+
+** 
+:PROPERTIES:
+:ID: 2025-12-10T17:37:31-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-10T09:21:44+0100
+:MOOD: 👌
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-10T17:38:06-0300
+:LANG: en
+:CLIENT: org-social.el
+:REPLY_TO: https://omidmash.de/social.org#2025-12-09T21:07:26+0100
+:END:
+
+I have it on my list, somewhere down the teens. The concept sounds interesting and useful.
+
+** 
+:PROPERTIES:
+:ID: 2025-12-10T23:13:28-0300
+:LANG: en
+:TAGS: humor photo argentina
+:CLIENT: org-social.el
+:END:
+
+– Do you want to buy some liqueur?
+– What liqueur?
+- LIQUEUR BOLS haha gotem
+
+  [[https://i.imgur.com/mEgfTza.png][pic]]
+
+** 
+:PROPERTIES:
+:ID: 2025-12-11T12:32:27-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/org-social/social.org#2025-12-11T10:26:14+0100
+:MOOD: 🏆
+:END:
+
+** 
+:PROPERTIES:
+:ID: 2025-12-23T20:55:50-0300
+:LANG: en
+:TAGS: blogging
+:CLIENT: org-social.el
+:END:
+
+I have put the [[https://github.com/TheSolarPrincess/The-Solar-Empire-source][source code]] for my website on Github.
+
+[[org-social:https://host.org-social.org/andros/social.org][andros]], you wanted to see it, so I‘m pinging you
+
+** 
+:PROPERTIES:
+:ID: 2025-12-23T20:59:43-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-21T11:59:52+0100
+:MOOD: 💀
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-23T21:00:22-0300
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2025-12-21T11:55:06+0100
+:MOOD: 💗
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2025-12-25T00:00:41-0300
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+Merry Christmas, those who celebrate! Did you know that even in though it‘s summer in Argentina now, Santa Claus still wears a coat?
+
+[[https://i.imgur.com/pkt5OBY.png]]
+
+I‘ve still got the New Year to celebrate with my secular Russian relatives, and Orthodox Christmas (Jan 7) to celebrate with my Christian Russian relatives. Merry days ahead.
+
+** 
+:PROPERTIES:
+:ID: 2026-01-11T09:42:23-0300
+:CLIENT: org-social.el
+:MIGRATION: https://thesolarprincess.site/social.org https://thesolarprincess.github.io/social.org
+:END:
+
+
+** 
+:PROPERTIES:
+:ID: 2026-01-12T18:01:35-0300
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+Looks like I won‘t be extending my thesolarprincess.site domain, my site‘s going to go back to thesolarprincess.github.io, including the social.org file. I have created the migration post, so I guess it‘s time to check if it works correctly!
+
+** 
+:PROPERTIES:
+:ID: 2026-01-31T17:31:41-0300
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+I see no posts in the timeline except my own, even though the client DOES download the feeds I follow... IDK what‘s going on
+
+** 
+:PROPERTIES:
+:ID: 2026-02-01T01:07:11-0300
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:REPLY_TO: https://raw.githubusercontent.com/fengbainuo/org-social/refs/heads/main/social.org#2026-01-31T23:13:53+0100
+:MOOD: 
+:END:
+
+I saw your post! And no other posts.
+org-social is the lastest version, my social.org validates correctly...
+
+** 2026-02-04T19:13:16-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:REPLY_TO: https://host.org-social.org/andros/social.org#2026-02-01T18:41:33+0100
+:MOOD: 
+:END:
+
+I don‘t have language filtering enabled (you can check my social.org file to see if maybe I missed it).
+Now I see more posts, not sure if the problem is resolved by itself automatically, or I‘m still missing some...
+
+** 2026-02-14T00:17:33-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+Now I don‘t see any posts other than my own! WTF! I miss org-social😭
+
+** 2026-03-06T06:16:24-0300
+:PROPERTIES:
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+What‘s a good email provider, that gives access to SMTP on a /free/ plan, and is not Google/Microsoft/Apple?
+
+** 2026-03-08T06:36:32-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:REPLY_TO: https://redbeard83.github.io/social.org#2026-03-07T17:22:17-0300
+:MOOD: 
+:END:
+
+What made you abandon, and then return to, Emacs?
+
+** 2026-03-14T22:14:39-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: emacs
+:CLIENT: org-social.el
+:END:
+
+I love Elfeed. I also compacted a large chunk of my elfeed database into a single file using =elfeed-db-compact=. This created a new problem that kinda screws up my workflow, and I need advice.
+
+Whenever I try to do anything at all with an entry in the compacted part – open, tag, untag, even store link to it (!), elfeed uncompresses the .zip file with the compacted db. This takes a second, and it doesn‘t stay compacted. `next`ing through entires takes 1 second per entry. Adding four tags takes four seconds.
+
+Is there a way to... uncompact the database, or maybe cache the unarchived zip data, or something?
+
+** 2026-03-16T17:43:05-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+Is it technically possible to have an Emacs window layout like this
+
+[[https://i.imgur.com/374kplk.png]]
+
+** 2026-03-19T00:27:20-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:REPLY_TO: https://redbeard83.github.io/social.org#2026-03-18T19:27:35-0300
+:MOOD: 
+:END:
+
+This is the power of an open-source that has been going for decades. Anything that sucks about it, someone fixes it.
+
+** 2026-03-23T01:07:06-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+Random itch.io indie recommendation – Dragonsweeper.
+A minesweeper/dungeon crawler puzzle, playable in browser, I had a lot of fun with it
+https://danielben.itch.io/dragonsweeper
