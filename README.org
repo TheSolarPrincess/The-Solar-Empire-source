@@ -8,7 +8,6 @@ This is the source code of my website, [[https://thesolarprincess.github.io/][Th
 
 ** How to
 
-Change the project-base variable in code.el to where you put the files. Or replace it with just getting the current directory; I don‘t do this for clandestine reasons.
-Run code.el to export everything into the out/ folder, which can be served from a static website host.
+Run makefile “deploy” to export everything into the out/ folder, which can be served from a static website host.
 
 RSS generation works with Babashka, you‘d have to install it if you want RSS.

@@ -126,7 +126,7 @@
            ("orgfiles"
             :base-directory ,(temp/path "source/")
             :publishing-directory ,(temp/path "out/")
-            :exclude "^social\\.org$\\|raw"
+            :exclude "\\(social\\.org\\|other/\\)" ;"^social\\.org$\\|other/"
             :publishing-function org-html-publish-to-html
             :recursive t
             :preserve-breaks t
@@ -198,9 +198,14 @@
       (add-hook 'org-export-before-processing-hook #'temp/org-set-head-extra)
       (org-publish-all)
       (remove-hook 'org-export-before-processing-hook #'temp/org-set-head-extra))
+
+    (with-temp-buffer
+      (insert-file-contents "source/other/shiftingmound.org")
+      (org-export-to-file 'tufte-html "out/blog/ru/shiftingmound.html"))
+
     (copy-file "out/index.html" "out/ru.html" t)
     (copy-file "source/social.org" "out/" t)
-    (shell-command "bb --config rss/bb.edn rss/script/run-static.clj rss.edn")
+    (shell-command "bb --config rss/bb.edn rss/script/run-static.clj rss/rss.edn")
     )
 #+end_src
 

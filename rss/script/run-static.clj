@@ -18,20 +18,9 @@
   (when-let [match (re-find #"(?s)<title[^>]*>(.*?)</title>" html-content)]
     (str/trim (second match))))
 
-(def feeds'
-  {:en-posts
-   {:path "feed-en.rss" :title "Solar Flares" :description "Collected writings of the Solar Princess"}
-   :ru-posts
-   {:path "feed-ru.rss" :title "Вспышки на Солнце" :description "Набор письмен Солнечной Принцессы"}})
-
-(def data'
-  [["blog/en/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :en-posts]
-   ["blog/ru/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :ru-posts]])
-
 (def document
   (memoize
    (fn [filename] (slurp (str "out/" filename)))))
-
 
 (defn process [posts feeds]
   (doseq [[feed-k feed-dict] feeds]

@@ -1,0 +1,10 @@
+                                        ; File, date, feed(s)
+{:posts
+ [["blog/en/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :en-posts]
+  ["blog/ru/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :ru-posts]]
+
+ :feeds
+ {:en-posts
+  {:path "feed_en.rss" :title "Solar Flares" :description "Collected writings of the Solar Princess"}
+  :ru-posts
+  {:path "feed_ru.rss" :title "Вспышки на Солнце" :description "Набор письмен Солнечной Принцессы"}}}
