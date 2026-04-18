@@ -101,18 +101,32 @@
 #+begin_src elisp  :var full-rebuild=1 dir=base-directory tbl=headers :result output
   (defun temp/path (fn) (expand-file-name fn dir))
 
-  (let (;(org-publish-use-timestamps-flag nil)
+  (defun temp/conditional-postamble (info)
+    (let ((file (plist-get info :input-file))
+          (title (car (plist-get info :title))))
+      (cond ((string-prefix-p (temp/path "source/blog/en/") file)
+             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Reply by e-mail</a>"
+                     (url-hexify-string title)))
+            ((string-prefix-p (temp/path "source/blog/ru/") file)
+             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a>"
+                     (url-hexify-string title)))
+            ((string-prefix-p (temp/path "source/blog/") file)
+             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a>"
+                     (url-hexify-string title)))
+            (t ""))
+      ))
+  (let (                          ;(org-publish-use-timestamps-flag nil)
         (org-confirm-babel-evaluate nil)
         (org-html-include-default-figure nil)
         (org-export-default-language "ru")
         (org-export-allow-bind-keywords t)
-                                          ;(org-html-postamble nil)
+        (org-html-postamble t)
         (org-publish-project-alist
          `(
            ("orgfiles"
             :base-directory ,(temp/path "source/")
             :publishing-directory ,(temp/path "out/")
-            :exclude "^social\\.org$"
+            :exclude "^social\\.org$\\|raw"
             :publishing-function org-html-publish-to-html
             :recursive t
             :preserve-breaks t
@@ -136,7 +150,7 @@
             :html-head-include-default-style nil
             :html-use-infojs nil
             :html-preamble t
-            :html-postamble nil
+            :html-postamble temp/conditional-postamble
             :sitemap-style list
             :sitemap-sort-files alphabetically
             ;; :makeindex t

@@ -1,5 +1,12 @@
 ;; <(Activate)>
 
+" A much neater solution for creating custom org links if you only want a fixed string based expansion (exports also work as you would expect). Setting org-link-abbrev-alist let's you write a shorthand link like [[yt:dQw4w9WgXcQ][some-nice-video]] which can act like a fuller link.
+
+There is a more convenient and local shorthand for this that works by putting something like #+LINK: yt https://www.youtube.com/watch?v= in the buffer.
+src_emacs-lisp[:exports both :results value]{(+ 1 1)} {{{results(=2=)}}}  "
+
+"https://docs.subtome.com/publishers/"
+
 (defvar project-base "~/Workspace/Muse")
 (defun path (rel-path) (expand-file-name rel-path project-base))
 
@@ -140,8 +147,8 @@
           (if (string-equal "en" lang) "🇷🇺 Русской версии пока нет" "🇺🇸 No English translation yet")
           )
         ))
-    (defun temp/main-header-ru () (temp/navbar "<a href=\"/en.html\">🇺🇸 English version</a>"))
-    (defun temp/main-header-en () (temp/navbar "<a href=\"/index.html\">🇷🇺 Русская версия</a>"))
+    (defun temp/main-header-ru () (temp/navbar "<a href=\"/en.html\">🇺🇸 English version</a> | <a href=\"/index.html\">Главная страница</a> | <a href=\"/about.html\">О себе</a> | <a href=\"/ideas.html\">Идеи</a> | <a href=\"/now.html\">Сейчас</a>"))
+    (defun temp/main-header-en () (temp/navbar "<a href=\"/index.html\">🇷🇺 Русская версия</a> | <a href=\"/en.html\">Main page</a> | <a href=\"/about_en.html\">About</a> | <a href=\"/ideas_en.html\">Ideas</a> | <a href=\"/now_en.html\">Now</a>"))
     (defun temp/home-header-ru () (temp/navbar "UNUSED"))
     (defun temp/locl-header-en () (temp/navbar (concat "<a href=\"/en.html\">Main page</a> | " (temp/translation))))
     (defun temp/locl-header-ru () (temp/navbar (concat "<a href=\"/index.html\">Главная страница</a> | " (temp/translation))))
@@ -170,6 +177,12 @@
       (cond
        ((string-match-p "index.org$" file) (temp/main-header-ru))
        ((string-match-p "en.org$" file) (temp/main-header-en))
+       ((string-match-p "about.org$" file) (temp/main-header-ru))
+       ((string-match-p "about_en.org$" file) (temp/main-header-en))
+       ((string-match-p "ideas.org$" file) (temp/main-header-ru))
+       ((string-match-p "ideas_en.org$" file) (temp/main-header-en))
+       ((string-match-p "now.org$" file) (temp/main-header-ru))
+       ((string-match-p "now_en.org$" file) (temp/main-header-en))
        ((string-match-p "blog/en/.*$" file)  (temp/locl-header-en))
        ((string-match-p "fiction/en/.*$" file)  (temp/fiction-header-en))
        ((string-match-p "fiction/.*$" file)  (temp/fiction-header-ru))
