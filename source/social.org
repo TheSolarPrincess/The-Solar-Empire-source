@@ -612,3 +612,27 @@ This is the power of an open-source that has been going for decades. Anything th
 Random itch.io indie recommendation – Dragonsweeper.
 A minesweeper/dungeon crawler puzzle, playable in browser, I had a lot of fun with it
 https://danielben.itch.io/dragonsweeper
+
+** 2026-06-19T22:39:23-0300
+:PROPERTIES:
+:LANG: en
+:CLIENT: org-social.el
+:END:
+
+I translated [[https://thesolarprincess.github.io/blog/en/shiftingmound.html][View from the Shifting Mound]] to English!
+
+/Slay the Princess/ vessels as complex trauma. Enjoy!
+
+[[https://thesolarprincess.github.io/attachment/shiftingmound/princess.png]]
+
+** 2026-06-29T15:35:43-0300
+:PROPERTIES:
+:LANG: en
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+I bought a half liter of coke, and it felt strangely heavy in my hand. So I looked at it closer and it's 600ml now. What's going on with Argentinian economy that it's shrinkflating /backwards/
+
+[[https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:joiuleqzubbj33njnaq2xs2w/bafkreidyfhrconle26kpkodfqh7lqlgbj3oouiu4henkxaz2jlxivimtfu]]

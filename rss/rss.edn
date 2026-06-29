@@ -1,7 +1,8 @@
                                         ; File, date, feed(s)
 {:posts
  [["blog/en/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :en-posts]
-  ["blog/ru/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :ru-posts]]
+  ["blog/ru/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :ru-posts]
+  ["blog/ru/shiftingmound.html" "2026-04-01T10:15:30.00Z" :ru-posts]]
 
  :feeds
  {:en-posts
