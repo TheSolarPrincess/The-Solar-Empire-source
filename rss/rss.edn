@@ -2,10 +2,11 @@
 {:posts
  [["blog/en/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :en-posts]
   ["blog/ru/psychometaphysics.html" "2025-11-30T10:15:30.00Z" :ru-posts]
-  ["blog/ru/shiftingmound.html" "2026-04-01T10:15:30.00Z" :ru-posts]]
+  ["blog/ru/shiftingmound.html" "2026-06-18T10:15:30.00Z" :ru-posts]
+  ["blog/en/shiftingmound.html" "2026-06-18T10:15:30.00Z" :en-posts]]
 
  :feeds
  {:en-posts
   {:path "feed_en.rss" :title "Solar Flares" :description "Collected writings of the Solar Princess"}
   :ru-posts
-  {:path "feed_ru.rss" :title "Вспышки на Солнце" :description "Набор письмен Солнечной Принцессы"}}}
+  {:path "feed_ru.rss" :title "Вспышки на Солнце" :description "Набор письмен Солнечной Принцессы"}} }

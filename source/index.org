@@ -13,7 +13,7 @@
 #+HTML: <br><br><br><br>
 
 #+name: get-link
-#+begin_src emacs-lisp :exports none :var f="" :var path="blog/"
+#+begin_src emacs-lisp :exports none :var f="" :var path="blog/ru/"
       (with-temp-buffer
         (insert-file-contents (concat path f ".org"))
         (org-mode)
@@ -30,7 +30,7 @@
 
 
 #+BEGIN_SRC emacs-lisp :results output :exports none
-(dolist (f (directory-files "blog/" nil "\.org"))
+(dolist (f (directory-files "blog/ru/" nil "\.org"))
   (princ (format "{{{post(%s)}}}\n" (file-name-sans-extension f))))
 #+END_SRC
 
@@ -54,6 +54,7 @@
 {{{post(hell)}}}
 {{{post(illuminati)}}}
 {{{post(momentofhappiness)}}}
+@@html:<a href="blog/ru/shiftingmound.html">☀️ Вид с Зыбкой Гряды</a>@@
 
 ** Наша жизнь – игра
 

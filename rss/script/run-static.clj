@@ -20,7 +20,13 @@
 
 (def document
   (memoize
-   (fn [filename] (slurp (str "out/" filename)))))
+   (fn [filename]
+     (case filename
+       "blog/ru/shiftingmound.html" ; special cases
+       "<title>Вид с Зыбкой Гряды</title> <body>Slay the Princess как комплексная травма - читать на сайте</body>"
+       "blog/en/shiftingmound.html" ; special cases
+       "<title>View from the Shifting Mound</title> <body>Slay the Princess vessels as complex trauma - read on the website</body>"
+       (slurp (str "out/" filename))))))
 
 (defn process [posts feeds]
   (doseq [[feed-k feed-dict] feeds]

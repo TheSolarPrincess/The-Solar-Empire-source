@@ -8,8 +8,6 @@
   (expand-file-name fn dir)
 #+end_src
 
-#+CALL: expand-path(fn="rot.png")
-
 #+NAME: read-file
 #+begin_src elisp :results value
 (with-temp-buffer
@@ -23,17 +21,6 @@
   (def files
     (->> (fs/glob "./source" "**{.org}")
          (map str) (map #(subs % (count "source/")))))
-
-  #_(def files
-      (->> (fs/glob "./source" "**{.org}")
-           (map str)
-           (map
-            (fn [path]
-              {:full-path path
-               :rel-path (subs file (count "source/"))
-               :filename (last (clojure.string/split path #"/"))
-               :html-rel-path (clojure.string/replace (subs file (count "source/")) ".org" ".html")})))
-      (into [] ))
 
   (defn mk [value]
     (str "<nav id=\"org-div-home-and-up\">" value "</nav>"))
@@ -55,22 +42,22 @@
        (clojure.string/starts-with? rel-path "blog/en")
        (let [ruv (clojure.string/replace rel-path "blog/en" "blog/ru")]
          (if (some #{ruv} files)
-           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "Main page"]] [["en.html" "Main page"]]))
+           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "☀️ Main page"]] [["en.html" "☀️ Main page"]]))
 
        (clojure.string/starts-with? rel-path "blog/ru")
        (let [env (clojure.string/replace rel-path "blog/ru" "blog/en")]
          (if (some #{env} files)
-           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "Главная страница"]] [["ru.html" "Главная страница"]]))
+           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
 
        (clojure.string/starts-with? rel-path "fiction/en")
        (let [ruv (clojure.string/replace rel-path "fiction/en" "source/fiction/ru")]
          (if (some #{ruv} files)
-           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "Main page"]] [["en.html" "Main page"]]))
+           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "☀️ Main page"]] [["en.html" "☀️ Main page"]]))
 
        (clojure.string/starts-with? rel-path "fiction/ru")
        (let [env (clojure.string/replace rel-path "fiction/ru" "source/fiction/en")]
          (if (some #{env} files)
-           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "Главная страница"]] [["ru.html" "Главная страница"]]))
+           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
 
        (= rel-path "index.org")
        [["en.html" "🇺🇸 English version"]]
@@ -99,19 +86,44 @@
 
 #+NAME: export
 #+begin_src elisp  :var full-rebuild=1 dir=base-directory tbl=headers :result output
+  (defvar temp/current-export-filename nil)
+
+  (defun temp/publish-html-or-tufte (plist filename pub-dir)
+    (if (with-temp-buffer
+          (insert-file-contents filename nil 1 500)
+          (goto-char (point-min))
+          (re-search-forward "^#\\+TUFTE: t" nil t))
+        (progn
+          (require 'ox-tufte)
+          (setq temp/current-export-filename filename)
+          (with-temp-buffer
+            (insert-file-contents filename)
+            (goto-char (point-min))
+            ;; (insert
+            ;;  "#+HTML_HEAD_EXTRA: <link rel=\"stylesheet\" href=\"/assets/css/tufte.css\"/>\n"
+            ;;  "#+HTML_HEAD_EXTRA: <link rel=\"stylesheet\" href=\"/assets/css/ox-tufte.css\"/>\n")
+            (org-export-to-file 'tufte-html
+                (expand-file-name
+                 (concat (file-name-base filename) ".html")
+                 pub-dir)
+              nil nil nil nil
+              plist)
+            (setq temp/current-export-filename nil)))
+      (org-html-publish-to-html plist filename pub-dir)))
+
   (defun temp/path (fn) (expand-file-name fn dir))
 
   (defun temp/conditional-postamble (info)
     (let ((file (plist-get info :input-file))
           (title (car (plist-get info :title))))
       (cond ((string-prefix-p (temp/path "source/blog/en/") file)
-             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Reply by e-mail</a>"
+             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Reply by e-mail</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Leave anonymous comment</a>"
                      (url-hexify-string title)))
             ((string-prefix-p (temp/path "source/blog/ru/") file)
-             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a>"
+             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Оставить анонимный комментарий</a>"
                      (url-hexify-string title)))
             ((string-prefix-p (temp/path "source/blog/") file)
-             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a>"
+             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Оставить анонимный комментарий</a>"
                      (url-hexify-string title)))
             (t ""))
       ))
@@ -127,7 +139,7 @@
             :base-directory ,(temp/path "source/")
             :publishing-directory ,(temp/path "out/")
             :exclude "\\(social\\.org\\|other/\\)" ;"^social\\.org$\\|other/"
-            :publishing-function org-html-publish-to-html
+            :publishing-function temp/publish-html-or-tufte ;org-html-publish-to-html
             :recursive t
             :preserve-breaks t
             :with-author nil
@@ -187,21 +199,63 @@
 
     (let ((alist (mapcar (lambda (row) (cons (elt row 0) (elt row 1))) tbl))
           (get-heading (lambda (filepath) (cdr (assoc filepath alist)))))
+
       (defun temp/org-set-head-extra (backend)
         (when (org-export-derived-backend-p backend 'html)
-          (let* ((file (buffer-file-name))
-                 (extra (funcall get-heading buffer-file-name)))
-            (setq-local org-html-head-extra extra)
-                                          ;(message "-> %s <–> %s |" org-html-head-extra buffer-file-name)
-            )))
+          (let* ((file (or buffer-file-name temp/current-export-filename))
+                 (from-table (funcall get-heading file))
+                 (from-tufte (if (org-export-derived-backend-p backend 'tufte-html)
+                                 "<link rel=\"stylesheet\" href=\"/assets/css/tufte.css\"/><link rel=\"stylesheet\" href=\"/assets/css/ox-tufte.css\"/><style> #org-div-home-and-up { margin-right: 30px}</style>"
+                               "")))
+            (goto-char (point-min))
+            (when (looking-at "^:PROPERTIES:")
+              (re-search-forward "^:END:" nil t)
+              (forward-line 1))
+            (when (not (string-empty-p from-table))
+              (insert "#+HTML_HEAD_EXTRA: " from-table "\n"))
+            (when (not (string-empty-p from-tufte))
+              (insert "#+HTML_HEAD_EXTRA: " from-tufte "\n")))))
+
+      ;; (defun temp/org-set-head-extra (backend)
+      ;;   (when (org-export-derived-backend-p backend 'html)
+      ;;     (let* ((file (or buffer-file-name temp/current-export-filename))
+      ;;            (extra (funcall get-heading file)))
+      ;;       (setq-local org-html-head-extra
+      ;;                   (concat org-html-head-extra extra))
+      ;;       (message "-> %s <–> %s | %s <<" org-html-head-extra file extra)
+      ;;       )))
+      ;; (defun temp/org-set-head-extra (backend)
+      ;;   (when (org-export-derived-backend-p backend 'html)
+      ;;     (let* ((file (buffer-file-name))
+      ;;            (navbar (funcall get-heading buffer-file-name))
+      ;;            (from-file org-html-head-extra)
+      ;;            (extra (concat from-file from-tufte navbar)))
+      ;;       (setq-local org-html-head-extra extra)
+      ;;       )))
+      ;; (defun temp/org-set-head-extra (backend)
+      ;;   (when (org-export-derived-backend-p backend 'html)
+      ;;     (let* ((file (buffer-file-name))
+      ;;            (from-table (funcall get-heading file))
+      ;;            (from-file org-html-head-extra)
+      ;;            (from-tufte
+      ;;             (if (org-export-derived-backend-p backend 'tufte-html)
+      ;;                 "<link rel=\"stylesheet\" href=\"/assets/css/tufte.css\"/>\n<link rel=\"stylesheet\" href=\"/assets/css/ox-tufte.css\"/>"
+      ;;               "")))
+      ;;       (setq-local org-html-head-extra
+      ;;                   (concat from-table "\n" from-file "\n" from-tufte)))))
 
       (add-hook 'org-export-before-processing-hook #'temp/org-set-head-extra)
       (org-publish-all)
-      (remove-hook 'org-export-before-processing-hook #'temp/org-set-head-extra))
+      (remove-hook 'org-export-before-processing-hook #'temp/org-set-head-extra)
+      )
 
-    (with-temp-buffer
-      (insert-file-contents "source/other/shiftingmound.org")
-      (org-export-to-file 'tufte-html "out/blog/ru/shiftingmound.html"))
+    ;; (require 'ox-tufte)
+    ;; (with-temp-buffer
+    ;;   (insert-file-contents "source/other/shiftingmound.org")
+    ;;   (org-export-to-file 'tufte-html "out/blog/ru/shiftingmound.html"))
+    ;; (with-temp-buffer
+    ;;   (insert-file-contents "source/other/shiftingmound-en.org")
+    ;;   (org-export-to-file 'tufte-html "out/blog/en/shiftingmound.html"))
 
     (copy-file "out/index.html" "out/ru.html" t)
     (copy-file "source/social.org" "out/" t)

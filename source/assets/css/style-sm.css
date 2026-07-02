@@ -91,3 +91,7 @@ span.figure-number {
     -0.1px  0.1px 0 pink,
      0.1px  0.1px 0 pink;*/
 }
+
+  #org-div-home-and-up
+  {  text-align: right; font-size: 100%; white-space: nowrap;
+     margin-right: 25px;}
