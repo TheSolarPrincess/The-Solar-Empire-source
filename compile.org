@@ -49,6 +49,12 @@
          (if (some #{env} files)
            [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
 
+       #_ "Post copies in /blog - must be AFTER I test the subdirectorues"
+       (clojure.string/starts-with? rel-path "blog")
+       (let [env (clojure.string/replace rel-path "blog" "blog/en")]
+         (if (some #{env} files)
+           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
+
        (clojure.string/starts-with? rel-path "fiction/en")
        (let [ruv (clojure.string/replace rel-path "fiction/en" "source/fiction/ru")]
          (if (some #{ruv} files)
@@ -56,6 +62,12 @@
 
        (clojure.string/starts-with? rel-path "fiction/ru")
        (let [env (clojure.string/replace rel-path "fiction/ru" "source/fiction/en")]
+         (if (some #{env} files)
+           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
+
+       #_ "Post copies in /fiction - must be AFTER I test the subdirectorues"
+       (clojure.string/starts-with? rel-path "fiction")
+       (let [env (clojure.string/replace rel-path "fiction" "source/fiction/en")]
          (if (some #{env} files)
            [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
 
@@ -84,24 +96,22 @@
   table
 #+end_src
 
+
 #+NAME: export
 #+begin_src elisp  :var full-rebuild=1 dir=base-directory tbl=headers :result output
   (defvar temp/current-export-filename nil)
 
   (defun temp/publish-html-or-tufte (plist filename pub-dir)
+    (setq temp/current-export-filename filename)
     (if (with-temp-buffer
           (insert-file-contents filename nil 1 500)
           (goto-char (point-min))
           (re-search-forward "^#\\+TUFTE: t" nil t))
         (progn
           (require 'ox-tufte)
-          (setq temp/current-export-filename filename)
           (with-temp-buffer
             (insert-file-contents filename)
             (goto-char (point-min))
-            ;; (insert
-            ;;  "#+HTML_HEAD_EXTRA: <link rel=\"stylesheet\" href=\"/assets/css/tufte.css\"/>\n"
-            ;;  "#+HTML_HEAD_EXTRA: <link rel=\"stylesheet\" href=\"/assets/css/ox-tufte.css\"/>\n")
             (org-export-to-file 'tufte-html
                 (expand-file-name
                  (concat (file-name-base filename) ".html")
@@ -167,7 +177,8 @@
             :sitemap-sort-files alphabetically
             ;; :makeindex t
             :html-html5-fancy t
-            :html-head "<link rel=\"stylesheet\" href=\"/assets/css/style.css\">"
+            :html-head "<link rel=\"stylesheet\" href=\"/assets/css/style.css\"><link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"><link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"><link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">"
+
             ;;:html-head-extra
             :html-footnotes-section "<hr> %2$s"
             )
@@ -212,53 +223,18 @@
               (re-search-forward "^:END:" nil t)
               (forward-line 1))
             (when (not (string-empty-p from-table))
-              (insert "#+HTML_HEAD_EXTRA: " from-table "\n"))
+              (insert "#+HTML_HEAD_EXTRA:" from-table "\n"))
             (when (not (string-empty-p from-tufte))
-              (insert "#+HTML_HEAD_EXTRA: " from-tufte "\n")))))
-
-      ;; (defun temp/org-set-head-extra (backend)
-      ;;   (when (org-export-derived-backend-p backend 'html)
-      ;;     (let* ((file (or buffer-file-name temp/current-export-filename))
-      ;;            (extra (funcall get-heading file)))
-      ;;       (setq-local org-html-head-extra
-      ;;                   (concat org-html-head-extra extra))
-      ;;       (message "-> %s <–> %s | %s <<" org-html-head-extra file extra)
-      ;;       )))
-      ;; (defun temp/org-set-head-extra (backend)
-      ;;   (when (org-export-derived-backend-p backend 'html)
-      ;;     (let* ((file (buffer-file-name))
-      ;;            (navbar (funcall get-heading buffer-file-name))
-      ;;            (from-file org-html-head-extra)
-      ;;            (extra (concat from-file from-tufte navbar)))
-      ;;       (setq-local org-html-head-extra extra)
-      ;;       )))
-      ;; (defun temp/org-set-head-extra (backend)
-      ;;   (when (org-export-derived-backend-p backend 'html)
-      ;;     (let* ((file (buffer-file-name))
-      ;;            (from-table (funcall get-heading file))
-      ;;            (from-file org-html-head-extra)
-      ;;            (from-tufte
-      ;;             (if (org-export-derived-backend-p backend 'tufte-html)
-      ;;                 "<link rel=\"stylesheet\" href=\"/assets/css/tufte.css\"/>\n<link rel=\"stylesheet\" href=\"/assets/css/ox-tufte.css\"/>"
-      ;;               "")))
-      ;;       (setq-local org-html-head-extra
-      ;;                   (concat from-table "\n" from-file "\n" from-tufte)))))
+              (insert "#+HTML_HEAD_EXTRA:" from-tufte "\n")))))
 
       (add-hook 'org-export-before-processing-hook #'temp/org-set-head-extra)
       (org-publish-all)
       (remove-hook 'org-export-before-processing-hook #'temp/org-set-head-extra)
       )
 
-    ;; (require 'ox-tufte)
-    ;; (with-temp-buffer
-    ;;   (insert-file-contents "source/other/shiftingmound.org")
-    ;;   (org-export-to-file 'tufte-html "out/blog/ru/shiftingmound.html"))
-    ;; (with-temp-buffer
-    ;;   (insert-file-contents "source/other/shiftingmound-en.org")
-    ;;   (org-export-to-file 'tufte-html "out/blog/en/shiftingmound.html"))
-
     (copy-file "out/index.html" "out/ru.html" t)
     (copy-file "source/social.org" "out/" t)
+    (copy-file "source/favicon.ico" "out/" t)
     (shell-command "bb --config rss/bb.edn rss/script/run-static.clj rss/rss.edn")
     )
 #+end_src
