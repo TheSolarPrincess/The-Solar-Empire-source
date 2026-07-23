@@ -1,4 +1,5 @@
 #+TITLE: You misunderstand wireheading
+#+LANGUAGE: en
 
 When muggles talk about AI, transhumanism, brain implants, and similar topics, you would often hear about wireheading.
 

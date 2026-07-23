@@ -1,4 +1,5 @@
 #+TITLE: Terraforming mars is a single-player game
+#+LANGUAGE: en
 
 I had been roped into playing Terraforming Mars. It was one of the worst tabletop games I ever played, and I played Monopoly!
 

@@ -8,22 +8,14 @@
   (expand-file-name fn dir)
 #+end_src
 
-#+NAME: read-file
-#+begin_src elisp :results value
-(with-temp-buffer
-      (insert-file-contents file)
-      (buffer-string))
-#+end_src
-
-
 #+NAME: headers
 #+begin_src clojure :results value :var dir=base-directory
   (def files
     (->> (fs/glob "./source" "**{.org}")
          (map str) (map #(subs % (count "source/")))))
 
-  (defn mk [value]
-    (str "<nav id=\"org-div-home-and-up\">" value "</nav>"))
+  #_(defn mk [value]
+      (str "<nav id=\"org-div-home-and-up\">" value "</nav>"))
 
   (defn mk-a [[link text]]
     (if link
@@ -36,55 +28,39 @@
      (->> as (map mk-a) (clojure.string/join " | "))
      "</nav>"))
 
+  (def main-en ["en.html" "☀️ Main page"])
+  (def main-ru ["ru.html" "☀️ Главная страница"])
+  (def trans-en "🇺🇸 English version")
+  (def trans-ru "🇷🇺 Русская версия")
+  (defn org->html [path] (clojure.string/replace path ".org" ".html"))
+
   (defn header [rel-path]
     (mk-navbar
      (cond
        (clojure.string/starts-with? rel-path "blog/en")
        (let [ruv (clojure.string/replace rel-path "blog/en" "blog/ru")]
          (if (some #{ruv} files)
-           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "☀️ Main page"]] [["en.html" "☀️ Main page"]]))
+           [[(clojure.string/replace ruv ".org" ".html") trans-ru] main-en] [main-en]))
 
        (clojure.string/starts-with? rel-path "blog/ru")
        (let [env (clojure.string/replace rel-path "blog/ru" "blog/en")]
          (if (some #{env} files)
-           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
-
-       #_ "Post copies in /blog - must be AFTER I test the subdirectorues"
-       (clojure.string/starts-with? rel-path "blog")
-       (let [env (clojure.string/replace rel-path "blog" "blog/en")]
-         (if (some #{env} files)
-           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
-
-       (clojure.string/starts-with? rel-path "fiction/en")
-       (let [ruv (clojure.string/replace rel-path "fiction/en" "source/fiction/ru")]
-         (if (some #{ruv} files)
-           [[(clojure.string/replace ruv ".org" ".html") "🇷🇺 Русская версия"] ["en.html" "☀️ Main page"]] [["en.html" "☀️ Main page"]]))
-
-       (clojure.string/starts-with? rel-path "fiction/ru")
-       (let [env (clojure.string/replace rel-path "fiction/ru" "source/fiction/en")]
-         (if (some #{env} files)
-           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
-
-       #_ "Post copies in /fiction - must be AFTER I test the subdirectorues"
-       (clojure.string/starts-with? rel-path "fiction")
-       (let [env (clojure.string/replace rel-path "fiction" "source/fiction/en")]
-         (if (some #{env} files)
-           [[(clojure.string/replace env ".org" ".html") "🇺🇸 English version"] ["ru.html" "☀️ Главная страница"]] [["ru.html" "☀️ Главная страница"]]))
+           [[(org->html env) trans-en] main-ru] [main-ru]))
 
        (= rel-path "index.org")
-       [["en.html" "🇺🇸 English version"]]
+       [["en.html" trans-en]]
 
        (= rel-path "ru.org")
-       [["en.html" "🇺🇸 English version"]]
+       [["en.html" trans-en]]
 
        (= rel-path "en.org")
-       [["ru.html" "🇷🇺 Русская версия"]]
+       [["ru.html" trans-ru]]
 
        (= rel-path "about_ru.org")
-       [["en.html" "🇺🇸 English version"]]
+       [["en.html" trans-en]]
 
        (= rel-path "about_en.org")
-       [["ru.html" "🇷🇺 Русская версия"]]
+       [["ru.html" trans-ru]]
        )))
 
   (def table
@@ -107,6 +83,8 @@
           (insert-file-contents filename nil 1 500)
           (goto-char (point-min))
           (re-search-forward "^#\\+TUFTE: t" nil t))
+
+                                          ; Tufte export
         (progn
           (require 'ox-tufte)
           (with-temp-buffer
@@ -119,30 +97,108 @@
               nil nil nil nil
               plist)
             (setq temp/current-export-filename nil)))
+                                          ; Regular export
       (org-html-publish-to-html plist filename pub-dir)))
 
   (defun temp/path (fn) (expand-file-name fn dir))
 
-  (defun temp/conditional-postamble (info)
-    (let ((file (plist-get info :input-file))
-          (title (car (plist-get info :title))))
-      (cond ((string-prefix-p (temp/path "source/blog/en/") file)
-             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Reply by e-mail</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Leave anonymous comment</a>"
-                     (url-hexify-string title)))
-            ((string-prefix-p (temp/path "source/blog/ru/") file)
-             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Оставить анонимный комментарий</a>"
-                     (url-hexify-string title)))
-            ((string-prefix-p (temp/path "source/blog/") file)
-             (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Оставить анонимный комментарий</a>"
-                     (url-hexify-string title)))
-            (t ""))
+  (defun temp/to-iso (ts)
+    (message "%s" ts)
+    (if (stringp ts)
+        ts
+      (format "%04d-%02d-%02d"
+              (org-element-property :year-start ts)
+              (org-element-property :month-start ts)
+              (org-element-property :day-start ts))))
+
+  (defun temp/syncidaction (link icon text)
+    (if link
+        (format "<a href=\"%s\"><img src=\"/assets/%s\" class=social-icon>%s</a><br>" link icon text)
+      ""))
+
+  (defun temp/build-postamble (info)
+    (let ((lang (plist-get info :language)))
+      (if (string-prefix-p (temp/path "source/blog/")  temp/current-export-filename )
+          (cond
+           ((equal lang "en")
+            (concat
+             (concat
+              "<hr>"
+              (format "<a href=\"%s\" id=permalink><img src=\"/assets/%s\" class=social-icon>%s</a>"
+                      (format "https://thesolarprincess.org/blog/ru/%s" (file-name-nondirectory (plist-get info :output-file)))
+                      "permalink.ico" "Permalink")
+              (format "<a href=\"%s\" id=email><img src=\"/assets/%s\" class=social-icon>%s</a><br>"
+                      (format "mailto:TheSunWorshipper@proton.me?subject=Re:%s" (car (plist-get info :title)))
+                      "mail.svg" "Reply by email"
+                      )
+              (temp/syncidaction "https://www.admonymous.co/thesolarprincess" "anonymous.svg" "Leave anonymous comment")
+              (temp/syncidaction (plist-get info :tumblr-mirror) "tumblr.svg" "Tumblr mirror")
+              (temp/syncidaction (plist-get info :substack-mirror) "substack.svg" "Substack mirror")
+              (temp/syncidaction (plist-get info :org-social-mirror) "emacs.png" "org-social mirror")
+              (temp/syncidaction (plist-get info :bluesky-mirror) "bluesky.svg" "Discuss on Bluesky")
+              (temp/syncidaction (plist-get info :mastodon-mirror) "mastodon.svg" "Discuss on Mastodon")
+              "<time class=\"dt-published\" datetime=" (temp/to-iso (car (plist-get info :date))) "></time>"
+              )
+             ))
+           (t
+            (concat
+             "<hr>"
+             (format "<a href=\"%s\" id=permalink><img src=\"/assets/%s\" class=social-icon>%s</a>"
+                     (format "https://thesolarprincess.org/blog/ru/%s" (file-name-nondirectory (plist-get info :output-file)))
+                     "permalink.ico" "Пермассылка")
+             (format "<a href=\"%s\" id=email><img src=\"/assets/%s\" class=social-icon>%s</a><br>"
+                     (format "mailto:TheSunWorshipper@proton.me?subject=Re:%s" (car (plist-get info :title)))
+                     "mail.svg" "Ответить по почте"
+                     )
+             (temp/syncidaction "https://www.admonymous.co/thesolarprincess" "anonymous.svg" "Оставить анонимный комментарий")
+             (temp/syncidaction (plist-get info :tumblr-mirror) "tumblr.svg" "Зеркало на Tumblr")
+             (temp/syncidaction (plist-get info :substack-mirror) "substack.svg" "Зеркало на Substack")
+             (temp/syncidaction (plist-get info :org-social-mirror) "emacs.png" "Зеркало на org-social")
+             (temp/syncidaction (plist-get info :bluesky-mirror) "bluesky.svg" "Обсудить на Bluesky")
+             (temp/syncidaction (plist-get info :mastodon-mirror) "mastodon.svg" "Обсудить на Mastodon")
+             "<time class=\"dt-published\" datetime=" (temp/to-iso (car (plist-get info :date))) "></time>"
+             )))
+        ""
+        )
       ))
-  (let (                          ;(org-publish-use-timestamps-flag nil)
+
+  ;; (defun temp/mailto-en (title)
+  ;;   (format
+  ;;    "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Reply by e-mail</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Leave anonymous comment</a>"
+  ;;    (url-hexify-string title)))
+
+  ;; (defun temp/mailto-ru (title)
+  ;;   (format "<a href=\"mailto: TheSunWorshipper@proton.me?subject=Re:%s\">Ответить по почте</a><br><a href=\"https://www.admonymous.co/thesolarprincess\">Оставить анонимный комментарий</a>"
+  ;;           (url-hexify-string title)))
+
+  ;; (defun temp/add-date (info str)
+  ;;   (concat str "<time class=\"dt-published\" datetime=" (car (plist-get info :date)) "></time>"))
+
+  ;; (defun temp/conditional-postamble (info)
+  ;;   (let ((file (plist-get info :input-file))
+  ;;         (title (car (plist-get info :title))))
+  ;;     (cond ((string-prefix-p (temp/path "source/blog/en/") file)
+  ;;            (temp/add-date info (temp/mailto-en title)))
+  ;;           ((string-prefix-p (temp/path "source/blog/ru/") file)
+  ;;            (temp/add-date info (temp/mailto-ru title)))
+  ;;           ((string-prefix-p (temp/path "source/blog/") file)
+  ;;            (temp/add-date info (temp/mailto-ru title)))
+  ;;           (t ""))
+  ;;     ))
+  (let ((org-publish-use-timestamps-flag nil)
         (org-confirm-babel-evaluate nil)
         (org-html-include-default-figure nil)
         (org-export-default-language "ru")
         (org-export-allow-bind-keywords t)
         (org-html-postamble t)
+        (org-export-date-timestamp-format "%F")
+        (org-export-options-alist
+         (append '((:tumblr-mirror "TUMBLR" nil nil t)
+                   (:bluesky-mirror "BLUESKY" nil nil t)
+                   (:mastodon-mirror "MASTODON" nil nil t)
+                   (:org-social-mirror "ORG_SOCIAL" nil nil t)
+                   (:substack-mirror "SUBSTACK" nil nil t))
+                 org-export-options-alist))
         (org-publish-project-alist
          `(
            ("orgfiles"
@@ -152,7 +208,10 @@
             :publishing-function temp/publish-html-or-tufte ;org-html-publish-to-html
             :recursive t
             :preserve-breaks t
-            :with-author nil
+            :with-author t
+            :author "The Solar Princess"
+            :with-date t
+            :date ("2025-01-01T00:00:00-00:00")
             :with-broken-links nil
             :section-numbers nil
             :exclude-tags ("noexport")
@@ -165,22 +224,35 @@
             :with-timestamps t
             :with-title t
             :auto-sitemap nil
-            ;; :sitemap-title "The Solar Empire"
-            ;; :sitemap-filename "index.html"
             :html-doctype "html5"
             :html-subtitle "Website of The Solar Princess"
             :html-head-include-default-style nil
             :html-use-infojs nil
             :html-preamble t
-            :html-postamble temp/conditional-postamble
+            :html-postamble temp/build-postamble
             :sitemap-style list
             :sitemap-sort-files alphabetically
             ;; :makeindex t
             :html-html5-fancy t
-            :html-head "<link rel=\"stylesheet\" href=\"/assets/css/style.css\"><link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"><link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"><link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">"
+            :html-head
+            "<link rel=\"stylesheet\" href=\"/assets/css/style.css\"><link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"><link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">"
 
             ;;:html-head-extra
             :html-footnotes-section "<hr> %2$s"
+            )
+           ("redirects-blog"
+            :base-directory ,(temp/path "source/blog/")
+            :recursive nil
+            :publishing-directory  ,(temp/path "out/blog/")
+            :base-extension "html"
+            :publishing-function org-publish-attachment
+            )
+           ("redirects-fiction"
+            :base-directory ,(temp/path "source/fiction/")
+            :recursive t
+            :publishing-directory  ,(temp/path "out/fiction/")
+            :base-extension "html"
+            :publishing-function org-publish-attachment
             )
            ("attachments"
             :base-directory ,(temp/path "source/attachment")
@@ -200,13 +272,13 @@
            ))
         )
 
-    (let ((files (directory-files "source/blog/ru" t "\\.org\\'")))
-      (dolist (file files)
-        (copy-file file (expand-file-name (file-name-nondirectory file) "source/blog") t)))
+    ;; (let ((files (directory-files "source/blog/ru" t "\\.org\\'")))
+    ;;   (dolist (file files)
+    ;;     (copy-file file (expand-file-name (file-name-nondirectory file) "source/blog") t)))
 
-    (let ((files (directory-files "source/fiction/ru" t "\\.org\\'")))
-      (dolist (file files)
-        (copy-file file (expand-file-name (file-name-nondirectory file) "source/fiction") t)))
+    ;; (let ((files (directory-files "source/fiction/ru" t "\\.org\\'")))
+    ;;   (dolist (file files)
+    ;;     (copy-file file (expand-file-name (file-name-nondirectory file) "source/fiction") t)))
 
     (let ((alist (mapcar (lambda (row) (cons (elt row 0) (elt row 1))) tbl))
           (get-heading (lambda (filepath) (cdr (assoc filepath alist)))))
@@ -236,8 +308,18 @@
     (copy-file "source/social.org" "out/" t)
     (copy-file "source/favicon.ico" "out/" t)
     (shell-command "bb --config rss/bb.edn rss/script/run-static.clj rss/rss.edn")
+
+    (dolist (path (append
+                   (directory-files "out/blog/en" t "\\.html\\'")
+                   (directory-files "out/blog/ru" t "\\.html\\'")))
+      (message "Processing %s" path)
+      (shell-command
+       (concat
+        "bb --config rss/bb.edn rss/script/run-postprocess.clj "
+        path " " path
+        ))
+      )
     )
 #+end_src
 
 #+RESULTS: export
-: 0

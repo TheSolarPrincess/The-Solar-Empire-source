@@ -1,4 +1,5 @@
 #+TITLE: View from the Shifting Mound
+#+LANGUAGE: en
 #+STARTUP: overview
 #+TUFTE: t
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="/assets/css/default.css">
@@ -1082,10 +1083,3 @@ Bananas in media are sometimes [[https://www.reddit.com/r/tumblr/comments/oe9kf0
 In Eliezer Yudkowsky's book, /Harry Potter and the Methods of Rationality/, the protagonist is a partial self-insert. And he is clearly dissociative. He has voices of his parents, famous people, and Hogwarts houses in his head, and his thought process often looks like them arguing; sort of like the protagonist of /Disco Elysium/ who is obviously very dissociative. Sometimes Harry is taken over by a "mysterious dark side", and his behaviour, self-perception, and even senses shift. He casually switches between his messianic syndrome "I must save everyone from everything and defeat Death itself" and detached edgelordism "you're not even an NPC, you're wallpaper, you're annoying, you should die". The Sorting Hat offers him Hufflepuff right away, telling him that a warm community would be good for him, but he /begs/ to give him something else, even though he can't explain what exactly he is afraid of. Nobody explicitly acknowledges that as a mental disorder or trauma; and it's explicitly denied when McGonagall tries to figure out if he had been abused by his parents. All the dissociative symptoms are presented as either perfectly normal spicy bananas, or as results of a spoilery magical intervention that has no real life equivalent.
 
 The author describes those symptoms extremely precisely. No way that's a coincidence. Eliezer knows dissociation. And in his blog, he showed more than once about how he either doesn't understand or doesn't care about psychiatry in general, so it's unlikely to be neutral book knowledge. Either he unconsciously writes a copy of his symptoms and interactions into his protagonist, or he intentionally gives his self-insert a very specific mental trauma. I rest my case.
-
-#+BEGIN_EXPORT html
-<div id="postamble" class="status">
-<a href="mailto: TheSunWorshipper@proton.me?subject=Re:Shifting%20Mound">Comment by email</a>
-<a href="https://www.admonymous.co/thesolarprincess">Leave anonymous comment</a>
-</div>
-#+END_EXPORT

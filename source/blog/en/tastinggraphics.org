@@ -1,4 +1,5 @@
 #+TITLE: Taste is an underappreciated component of video game graphics
+#+LANGUAGE: en
 
 Your tongue knows what everything tastes like.
 

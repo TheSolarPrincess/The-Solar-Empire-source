@@ -1,5 +1,5 @@
 #+TITLE: Papers please and the Tomb of the Unknown Soldier
-
+#+LANGUAGE: en
 
 I have been provoked into spontaneously analyzing /Papers, Please/. I think the idea is sufficiently self-contained and novel to be a post.
 

@@ -1,4 +1,7 @@
 #+TITLE: Doomsday argument is hopeful
+#+SUBSTACK: https://thesolarprincess.substack.com/p/doomsday-argument-inspires-hope
+#+LANGUAGE: en
+#+DATE: <2026-08-06 Thu>
 
 There's a well-known philosophical concept known as the Doomsday Argument. Here's Randall Munroe's simple take on it:
 

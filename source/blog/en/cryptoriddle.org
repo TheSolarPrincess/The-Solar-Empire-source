@@ -1,4 +1,5 @@
 #+TITLE: Asymmetric riddleography
+#+LANGUAGE: en
 
 As a recovering expert in communication protocols, I occasionally try to write what I know.
 

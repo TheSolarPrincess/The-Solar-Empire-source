@@ -1,4 +1,5 @@
 #+TITLE: Narrative design in Disco Elysium
+#+LANGUAGE: en
 
 Narrative design is not exactly my cup of tea, but I have some thoughts.
 

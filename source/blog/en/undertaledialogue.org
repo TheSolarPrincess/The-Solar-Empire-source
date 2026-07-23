@@ -1,4 +1,5 @@
 #+TITLE: The mechanics of Undertale dialogues
+#+LANGUAGE: en
 
 Let's keep talking about narrative design and dialogue mechanics. This time we'll take a look at dialogue mechanics of Undertale.
 

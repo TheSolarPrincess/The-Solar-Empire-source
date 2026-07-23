@@ -230,3 +230,10 @@ display: none;
 .twocol ul, .twocol ol { margin: 0 0 .25rem 1.2em; }
 
 .hidden { display: none; }
+
+.social-icon {
+    width: 16px; height: 16px;}
+
+#postamble { text-align: left; }
+
+#permalink { visibility: hidden; display: none;}

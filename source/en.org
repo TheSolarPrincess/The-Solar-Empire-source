@@ -27,7 +27,7 @@ Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russ
 
 
 #+MACRO: post #+CALL: get-link(f="$1") :results raw
-#+MACRO: fiction #+CALL: get-link(f="$1", path="fiction/en/") :results raw
+# #+MACRO: fiction #+CALL: get-link(f="$1", path="fiction/en/") :results raw
 
 
 #+BEGIN_SRC emacs-lisp :results output :exports none
@@ -37,7 +37,7 @@ Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russ
 
 
 @@html:<a href="blog/en/shiftingmound.html">☀️ View from the Shifting Mound</a>@@
-{{{fiction(godoftails)}}}
+{{{post(godoftails)}}}
 {{{post(annoyingrpg)}}}
 {{{post(cryptoriddle)}}}
 {{{post(disconarrative)}}}

@@ -1,5 +1,5 @@
 #+TITLE: Gale from Baldur’s Gate III should eat a magic item every long rest
-
+#+LANGUAGE: en
 I like neither the Gale's arcane hunger system nor the long rest system.
 
 Arcane Hunger is just annoying. First time Gale asked me to eat an item, I was like “sure, no problem, I have some +1 daggers that I don't care about”, and then it turned out that not all magic items are eligible, and I need to sacrifice an actually useful thing. By the next time he came up I prepared a sacrificial bauble, of course, but I was still a bit salty. Nobody likes this aspect of Gale.
