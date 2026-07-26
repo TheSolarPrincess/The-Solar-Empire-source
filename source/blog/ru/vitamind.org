@@ -1,4 +1,5 @@
 #+TITLE: Витамин D делает тебя бессмертным
+#+DATE: <2024-01-30 Tue>
 
 [[https://informationisbeautiful.net/visualizations/snake-oil-scientific-evidence-for-nutritional-supplements-vizsweet/][Сайт с инфометриками]].
 

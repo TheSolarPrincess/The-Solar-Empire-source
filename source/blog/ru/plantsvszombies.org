@@ -2,6 +2,7 @@
 :DIR:      ~/Workspace/muse/source/attachment/images/pvz/
 :END:
 #+TITLE: Техническая аномалия Plants vs Zombies
+#+DATE: <2023-12-11 Mon>
 
 В универе я играла в игру *Plants vs. Zombies*, до того, как ее съел капитализм. Игровое поле выглядит вот так:
 

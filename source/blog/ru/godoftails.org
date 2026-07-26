@@ -1,4 +1,5 @@
 #+TITLE: Бог Решки
+#+DATE: <2024-02-18 Sun>
 
 /[[https://l.dm.am/Comments.aspx?contentId=12299&contentType=9][Первоначально запощено на dm.am в рамках литературного конкурса.]]/
 
@@ -275,4 +276,4 @@ INSUFFICIENT DATA FOR MEANINGFUL ANSWER. (Аа. 8:12)
 
 #+ATTR_HTML: :width 400px :align center
 #+CAPTION: Фанарт от Rosey-Arts
-[[attach:images/Rosey-arts.png]]
+[[file:../../attachment/images/Rosey-arts.png]]
