@@ -1,5 +1,7 @@
 #+TITLE: Analyzing the political compass with algebraic topology
 #+LANGUAGE: en
+#+DATE: <2024-01-28 Sun>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/analyzing-the-political-compass-with
 
 In political theory there is a model, “political compass”, that places political views along two axes: left-right, and authoritarian-libertarian.
 

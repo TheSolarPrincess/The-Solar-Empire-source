@@ -1,5 +1,7 @@
 #+TITLE: Taste is an underappreciated component of video game graphics
 #+LANGUAGE: en
+#+DATE: <2024-11-30 Sat>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/taste-is-an-underappreciated-component
 
 Your tongue knows what everything tastes like.
 

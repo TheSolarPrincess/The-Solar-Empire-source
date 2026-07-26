@@ -3,6 +3,9 @@
 :END:
 #+TITLE: Identity disorders 2 – Monster Girl Encyclopedia
 #+LANGUAGE: en
+#+DATE: <2025-03-01 Sat>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/identity-disorders-part-2-monster
+
 /This post in a follow-up to [[file:blog/en/identitydisorders.org][my previous investigation]] into identity disorders. You have to read it first./
 
 Sometimes one gets “stuck” on a creative/research problem and can't work on it directly. One should then put it in the [[https://discoelysium.fandom.com/wiki/Thought_Cabinet][Thought Cabinet]] so it can solve itself. One occasionally feeds it random data and lets it ferment. One reads stuff, plays games, talks to people, all as the problem is watching one from the subconscious, absorbing, tugging on the strings, subtly guiding.

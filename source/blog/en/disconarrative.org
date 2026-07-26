@@ -1,5 +1,7 @@
 #+TITLE: Narrative design in Disco Elysium
 #+LANGUAGE: en
+#+DATE: <2023-12-14 Thu>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/narrative-design-in-disco-elysium
 
 Narrative design is not exactly my cup of tea, but I have some thoughts.
 

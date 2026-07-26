@@ -3,6 +3,8 @@
 :END:
 #+TITLE: Hell inside my own head and emotional torture
 #+LANGUAGE: en
+#+DATE: <2024-05-05 Sun>
+
 In /Unsong/, the forces of Hell made a political move of broadcasting to Earth what exactly is going in in Hell. [[https://unsongbook.com/interlude-%D7%99-the-broadcast/][The chapter where this happens]] is covered in military-grade trigger warnings and assurance that you don't need to read it to understand the story. Those trigger warnings weren't enough, the author had to add another layer of “no, I am serious”, and now I am adding yet another layer. As you can probably guess, it's not pretty in Hell.
 
 Moral philosopher Peter Singer has a cameo in this book. His main point is that people don't do good optimally. He pushes the typical spiel of “effective altruists” — yes, donating money to cure a child from cancer is all fine, but if instead you send the money to Africa in an organized fashion to cure malaria, you will save much more children per marginal dollar, so you should better do that.

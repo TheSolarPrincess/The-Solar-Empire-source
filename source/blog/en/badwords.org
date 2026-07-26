@@ -1,5 +1,6 @@
 #+TITLE: On bad astronomy and words
 #+LANGUAGE: en
+#+DATE: <2023-12-29 Fri>
 
 John is an astronomer. A really awesome astronomer — he knows everything about stars, planets, zodiacs, and whatever else astronomers know (I’m not an astronomologist). If you need to calculate the distance to a star, figure out how to build a plane that works on Mars, or process telescope data to find habitable planets — he’s the guy you’d mean when you say “I know a guy”. Oh, and John lives in 2005, before Pluto was reclassified as not a planet.
 He’s writing a book about the planets in the Solar System, comparing their statistics. In the chapter on planet sizes, he writes: “The smallest planet in the Solar System is about 2400 kilometers in diameter,” meaning Pluto.

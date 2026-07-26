@@ -1,5 +1,6 @@
 #+TITLE: God of Tails
-
+#+SUBSTACK: https://thesolarprincess.substack.com/p/god-of-tails
+#+DATE: <2024-02-18 Sun>
 
 /Originally published on [[https://l.dm.am/Comments.aspx?contentId=12299&contentType=9][dm.am]]/
 
@@ -278,4 +279,4 @@ And we shall see. (Аа. 16:8)
 
 #+ATTR_HTML: :width 400px :align center
 #+CAPTION: Fan art from Rosey-Arts
-[[file:~/Workspace/muse/source/attachment/images/Rosey-arts.png]]
+[[file:../../attachment/images/Rosey-arts.png]]

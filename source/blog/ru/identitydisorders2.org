@@ -2,6 +2,7 @@
 :DIR:      ../attachment/images/identity/
 :END:
 #+TITLE: Расстройства идентичности 2 – Monster Girl Encyclopedia
+#+LANGUAGE: ru
 #+DATE: <2025-03-01 Sat>
 
 /Пост является продолжением [[file:identitydisorders.org][моего предыдущего исследования о расстройствах идентичности]]. Читать его сначала -- обязательно./

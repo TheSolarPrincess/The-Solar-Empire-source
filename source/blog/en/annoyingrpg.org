@@ -4,6 +4,8 @@
 :END:
 #+TITLE: Towards less annoying RPGs
 #+LANGUAGE: en
+#+DATE: <2023-06-15 Thu>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/towards-less-annoying-rpgs
 
 My relationship with the RPG genre is an unending love/hate. I love its core elements. I enjoy roleplaying, exploring, doing side quests, leveling up, immersing myself, freedom of choice, replayability, rich stories and settings, flexible mechanics, dungeon crawling... basically, everything normal people love about the genre.
 

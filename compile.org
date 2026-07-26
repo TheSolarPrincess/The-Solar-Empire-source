@@ -103,7 +103,7 @@
   (defun temp/path (fn) (expand-file-name fn dir))
 
   (defun temp/to-iso (ts)
-    (message "%s" ts)
+    ;(message "%s" ts)
     (if (stringp ts)
         ts
       (format "%04d-%02d-%02d"

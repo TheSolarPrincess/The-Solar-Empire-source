@@ -1,5 +1,6 @@
 #+TITLE: Вид с Зыбкой Гряды
 #+STARTUP: overview
+#+LANGUAGE: ru
 #+DATE: <2026-04-13 Mon>
 #+TUFTE: t
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="/assets/css/default.css">

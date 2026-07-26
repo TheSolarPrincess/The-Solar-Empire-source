@@ -1,5 +1,7 @@
 #+TITLE: You misunderstand wireheading
 #+LANGUAGE: en
+#+DATE: <2024-05-09 Thu>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/you-misunderstand-wireheading
 
 When muggles talk about AI, transhumanism, brain implants, and similar topics, you would often hear about wireheading.
 

@@ -1,5 +1,7 @@
 #+TITLE: The mechanics of Undertale dialogues
 #+LANGUAGE: en
+#+DATE: <2024-05-03 Fri>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/undertale-dialogue
 
 Let's keep talking about narrative design and dialogue mechanics. This time we'll take a look at dialogue mechanics of Undertale.
 

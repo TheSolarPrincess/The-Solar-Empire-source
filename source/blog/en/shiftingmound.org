@@ -1,5 +1,6 @@
 #+TITLE: View from the Shifting Mound
 #+LANGUAGE: en
+#+DATE: <2026-04-13 Mon>
 #+STARTUP: overview
 #+TUFTE: t
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="/assets/css/default.css">

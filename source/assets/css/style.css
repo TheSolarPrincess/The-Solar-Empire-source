@@ -237,3 +237,12 @@ display: none;
 #postamble { text-align: left; }
 
 #permalink { visibility: hidden; display: none;}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid currentColor;
+  padding: 0.4em 0.8em;
+}

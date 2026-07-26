@@ -4,7 +4,7 @@
    [clojure.java.io :as io]
    ))
 (import '[org.jsoup Jsoup]
-        '[org.jsoup.nodes Document Element])
+        '[org.jsoup.nodes Document Element Comment])
 
 
 (defn add-class! [^Element el class]
@@ -45,6 +45,11 @@
       (.attr link "aria-hidden" "true")
       (.attr link "tabindex" "-1")
       )
+
+    (doseq [comment (.select doc "*")]
+      (doseq [node (.childNodes comment)]
+        (when (instance? Comment node)
+          (.remove node))))
 
     (spit output (.outerHtml doc))))
 

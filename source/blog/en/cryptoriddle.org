@@ -1,5 +1,7 @@
 #+TITLE: Asymmetric riddleography
 #+LANGUAGE: en
+#+DATE: <2023-09-19 Tue>
+#+SUBSTACK: https://thesolarprincess.substack.com/p/asymmetric-riddleography
 
 As a recovering expert in communication protocols, I occasionally try to write what I know.
 
