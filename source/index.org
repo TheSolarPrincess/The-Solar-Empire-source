@@ -1,16 +1,38 @@
 #+TITLE: Солнечная Империя
 #+OPTIONS: broken-links:mark
 
-#+ATTR_HTML: :style float:left;margin:0 5px 5px 0; max-height:250px;
-[[file:attachment/images/userpic.png]]
+# #+ATTR_HTML: :style float:right;margin:0 5px 5px 0; max-height:300px;
+# [[file:attachment/images/userpic.png]]
 
-Набор письмен Солнечной Принцессы.
+# #+HTML: <br><br>
 
-Связаться по почте – TheSunWorshipper@proton.me
+# Письмена и лор Солнечной Принцессы.
 
-Подписаться на обновления – [[file:feed_ru.rss][RSS]], [[file:feed_en.rss][RSS (english)]], [[https://t.me/solarbroadcast][Telegram]], [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], [[https://mastodon.social/@thesolarprincess][Mastodon]], @@html:<a href="social.org">org-social</a>@@ , или просто пишите на почту!
-
-#+HTML: <br><br><br><br>
+#+begin_export html
+<span class="h-card">
+<figure>
+<img class="u-photo" src="/attachment/images/userpic.png"
+alt="userpic.png" style="float: right; margin: 0px 5px 5px 0px; max-height: 300px; -webkit-transform: scaleX(-1);transform: scaleX(-1);" title=""><br>
+</figure>
+Письмена и лор <a href="/" class="u-url u-uid">Солнечной Принцессы</a>
+<span class="p-name" style="visibility: hidden; display: none;">Солнечная Принцесса</span>.
+  <ul style="list-style-type:circle;">
+  <li><a href="/feed_ru.rss"><img src="/assets/rss.png" class="social-icon">RSS</a></li>
+   <li>
+     <a href="mailto:TheSunWorshipper@proton.me" id="email" class="u-email"><img src="/assets/mail.svg" class="social-icon">TheSunWorshipper@proton.me</a></li>
+   <li>
+   <a href="https://www.tumblr.com/tsolarprincess" rel="me"  class="u-url"><img src="/assets/tumblr.svg" class="social-icon">Tumblr</a></li>
+   <li>
+   <a href="https://thesolarprincess.substack.com/" rel="me" class="u-url"><img src="/assets/substack.svg" class="social-icon">Substack</a></li>
+   <li>
+   <a href="https://bsky.app/profile/thesolarprincess.org" rel="me atproto" class="u-url"><img src="/assets/bluesky.svg" class="social-icon">Bluesky</a></li>
+   <li><a href="https://t.me/solarbroadcast" rel="me" class="u-url"><img src="/assets/telegram.svg" class="social-icon">Telegram</a></li>
+   <li>
+   <a href="https://mastodon.social/@thesolarprincess" rel="me" class="u-url"><img src="/assets/mastodon.svg" class="social-icon">Mastodon</a></li>
+   <li><a href="/social.org"><img src="/assets/emacs.png" class="social-icon">Org-social</a></li>
+  </ul>
+</span>
+#+end_export
 
 #+name: get-link
 #+begin_src emacs-lisp :exports none :var f="" :var path="blog/ru/"
@@ -35,7 +57,13 @@
 #+END_SRC
 
 
-#+HTML: <p style="clear: left;"><hr></p>
+#+HTML: <p style="clear: both;"><hr></p>
+
+Моя самая признанная работа – [[file:blog/ru/shiftingmound.org][Вид с Зыбкой Гряды]] – личная история травмы, множественных личностей и диссоциации. Она помогла многим людям, и если вы прочитаете только что-то одно со всего сайта, пусть будет это.
+
+Все посты далее.
+
+
 * -----
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: twocol
@@ -122,6 +150,7 @@
 {{{post(highenergylogic)}}}
 {{{post(toolvslaw)}}}
 {{{post(psychometaphysics)}}}
+{{{post(fatima)}}}
 
 ** Матемагика
 

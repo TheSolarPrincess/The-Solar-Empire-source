@@ -12,6 +12,7 @@
 #+OPTIONS: num:0
 #+OPTIONS: author:nil date:nil created:nil
 #+LINK: att file:../../attachment/shiftingmound/
+#+SUBSTACK: https://thesolarprincess.substack.com/p/view-from-the-shifting-mound
 #+BEGIN_CENTER
 /CW: trauma, suicide, spoilers for Slay the Princess/
 #+END_CENTER

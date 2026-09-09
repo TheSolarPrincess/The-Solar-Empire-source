@@ -1,17 +1,39 @@
 #+TITLE: The Solar Empire
 
-#+ATTR_HTML: :style float:left;margin:0 5px 5px 0; max-height:250px;
-[[file:attachment/images/userpic.png]]
+# #+ATTR_HTML: :style float:right;margin:0 5px 5px 0; max-height:300px;
+# [[file:attachment/images/userpic.png]]
 
-The writings of The Solar Princess.
+# The Solar Princess.
 
-The canonical language of most of the things I write is Russian. The English texts are inexact translations, and only some texts are translated. If you understand both languages, read the [[file:index.org][Russian version]] of the site.
+#+begin_export html
+<span class="h-card">
+<figure>
+<img class="u-photo" src="/attachment/images/userpic.png"
+alt="userpic.png" style="float: right; margin: 0px 5px 5px 0px; max-height: 300px; -webkit-transform: scaleX(-1);transform: scaleX(-1);" title=""><br>
+</figure>
+The writings and lore of <a href="/en.html" class="p-name u-url u-uid">The Solar Princess</a>.
 
-Contact me by email – TheSunWorshipper@proton.me
+<ul style="list-style-type:circle;">
+  <li><a href="/feed_en.rss"><img src="/assets/rss.png" class="social-icon">🇺🇸RSS</a></li>
+  <li><a href="/feed_ru.rss"><img src="/assets/rss.png" class="social-icon">🇷🇺RSS</a></li>
+   <li>
+     <a href="mailto:TheSunWorshipper@proton.me" id="email"  class="u-email"><img src="/assets/mail.svg" class="social-icon">TheSunWorshipper@proton.me</a></li>
+   <li>
+   <a href="https://www.tumblr.com/tsolarprincess" rel="me" class="u-url"><img src="/assets/tumblr.svg" class="social-icon">Tumblr</a></li>
+   <li>
+   <a href="https://thesolarprincess.substack.com/" rel="me" class="u-url"><img src="/assets/substack.svg" class="social-icon">Substack</a></li>
+   <li>
+   <a href="https://bsky.app/profile/thesolarprincess.org" rel="me atproto" class="u-url"><img src="/assets/bluesky.svg" class="social-icon">Bluesky</a></li>
+   <li><a href="https://t.me/solarbroadcast" rel="me" class="u-url"><img src="/assets/telegram.svg" class="social-icon">🇷🇺Telegram</a></li>
+   <li>
+   <a href="https://mastodon.social/@thesolarprincess" rel="me" class="u-url"><img src="/assets/mastodon.svg" class="social-icon">Mastodon</a></li>
+   <li><a href="/social.org"><img src="/assets/emacs.png" class="social-icon">Org-social</a></li>
+  </ul>
+</span>
+#+end_export
 
-Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russian)]], [[https://bsky.app/profile/tsolarprincess.bsky.social][Bluesky]], @@html:<a href="social.org">org-social</a>@@ , or just email me!
 
-#+HTML: <p style="clear: left;"><hr></p>
+#+HTML: <p style="clear: both;"><hr></p>
 
 #+name: get-link
 #+begin_src emacs-lisp :exports none :var f="" :var path="blog/en/"
@@ -35,8 +57,16 @@ Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russ
   (princ (format "{{{post(%s)}}}\n" (file-name-sans-extension f))))
 #+END_SRC
 
+The canonical language of most of the things I write is Russian. Not all texts are translated. If you understand both languages, read the [[file:index.org][Russian version]] of the site.
 
-@@html:<a href="blog/en/shiftingmound.html">☀️ View from the Shifting Mound</a>@@
+The single most acclaimed thing I'd written is [[file:blog/en/shiftingmound.org][View from the Shifting Mound]] – a story of trauma, multiple personalities, and dissociation. If you read one thing on this website, you should read this one, it was genuinely helpful to many people.
+
+All posts below.
+
+{{{post(shiftingmound)}}}
+{{{post(identitydisorders)}}}
+{{{post(identitydisorders2)}}}
+{{{post(fatima)}}}
 {{{post(godoftails)}}}
 {{{post(annoyingrpg)}}}
 {{{post(cryptoriddle)}}}
@@ -45,8 +75,6 @@ Subscribe – [[file:feed_en.rss][RSS (english)]], [[file:feed_ru.rss][RSS (russ
 {{{post(foeaddiction)}}}
 {{{post(hell)}}}
 {{{post(hungrygale)}}}
-{{{post(identitydisorders)}}}
-{{{post(identitydisorders2)}}}
 {{{post(psychometaphysics)}}}
 {{{post(papersplease)}}}
 {{{post(politicstopology)}}}
