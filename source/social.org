@@ -647,3 +647,43 @@ I bought a half liter of coke, and it felt strangely heavy in my hand. So I look
 
 My refugee claim has been approved! I now have residence in Argentina, and if I live 2 years there without leaving the country, I can apply for citizenship.
 No danger of being deported back to Russia 🥰
+
+** 2026-09-18T20:00:15-0300
+:PROPERTIES:
+:CLIENT: org-social.el
+:POLL_END: 2026-09-25T20:00:15-0300
+:END:
+
+Should Dwarven women in fantasy have beards?
+
+- [ ] Yes
+- [ ] No
+
+
+** 
+:PROPERTIES:
+:ID: 2026-09-18T20:05:29-0300
+:CLIENT: org-social.el
+:REPLY_TO: http://thesolarprincess.github.io/social.org#2026-09-18T20:00:15-0300
+:POLL_OPTION: Yes
+:END:
+
+** 2026-10-09T22:28:41-0300
+:PROPERTIES:
+:CLIENT: org-social.el
+:REPLY_TO: https://codeberg.org/holl/holl-social/raw/branch/main/social.org#2026-10-07T11:14:18+0200
+:MOOD: 👍
+:END:
+
+
+** 2026-10-15T19:08:03-0300
+:PROPERTIES:
+:TAGS: 
+:CLIENT: org-social.el
+:MOOD: 
+:END:
+
+A blogpost recently appeared on my feed on how you should not use passkeys.
+[[https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them][Passkeys are a trap]]
+
+Anybody who knows more about this thing than me, can confirm/deny?

@@ -116,16 +116,23 @@
         (format "<a href=\"%s\"><img src=\"/assets/%s\" class=social-icon>%s</a><br>" link icon text)
       ""))
 
+  (defun temp/like (text)
+    (format "<button class='like-button' onclick=\"fetch(&quot;https://likes.tsolarprincess.workers.dev&quot;, { method: &quot;POST&quot; , body: location.href }); this.disabled = true;\">%s</button><br>" text)
+    )
+
+
   (defun temp/build-postamble (info)
-    (let ((lang (plist-get info :language)))
+    (let ((lang (plist-get info :language))
+          (like-button ))
       (if (string-prefix-p (temp/path "source/blog/")  temp/current-export-filename )
           (cond
            ((equal lang "en")
             (concat
              (concat
               "<hr>"
+              (temp/like "❤️‍🔥 I liked this!")
               (format "<a href=\"%s\" id=permalink><img src=\"/assets/%s\" class=social-icon>%s</a>"
-                      (format "https://thesolarprincess.org/blog/ru/%s" (file-name-nondirectory (plist-get info :output-file)))
+                      (format "https://thesolarprincess.org/blog/en/%s" (file-name-nondirectory (plist-get info :output-file)))
                       "permalink.ico" "Permalink")
               (format "<a href=\"%s\" id=email><img src=\"/assets/%s\" class=social-icon>%s</a><br>"
                       (format "mailto:TheSunWorshipper@proton.me?subject=Re:%s" (car (plist-get info :title)))
@@ -143,6 +150,7 @@
            (t
             (concat
              "<hr>"
+             (temp/like "❤️‍🔥 Мне понравилось!")
              (format "<a href=\"%s\" id=permalink><img src=\"/assets/%s\" class=social-icon>%s</a>"
                      (format "https://thesolarprincess.org/blog/ru/%s" (file-name-nondirectory (plist-get info :output-file)))
                      "permalink.ico" "Пермассылка")
